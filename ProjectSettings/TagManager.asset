@@ -38,11 +38,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Background
     uniqueID: 3544043217
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Collision
+    uniqueID: 38718321
     locked: 0
   - name: Over
     uniqueID: 801455439
