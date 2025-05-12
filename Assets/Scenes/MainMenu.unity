@@ -257,6 +257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 676537157}
+  - component: {fileID: 676537159}
   - component: {fileID: 676537158}
   m_Layer: 0
   m_Name: 'SFX '
@@ -290,8 +291,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 928027e28e5f24143803e224eeaad0a5, type: 3}
-  m_Resource: {fileID: 8300000, guid: 928027e28e5f24143803e224eeaad0a5, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -377,6 +378,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &676537159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676537156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d272b2e6264b7dc4895d4c7663fffaeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clips:
+  - {fileID: 8300000, guid: 928027e28e5f24143803e224eeaad0a5, type: 3}
+  - {fileID: 8300000, guid: 3f84b31cf52a8e546b97294e767bdb89, type: 3}
+  soundType: 1
 --- !u!1 &850729966
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +655,6 @@ GameObject:
   - component: {fileID: 1887710105}
   - component: {fileID: 1887710104}
   - component: {fileID: 1887710107}
-  - component: {fileID: 1887710108}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -764,19 +780,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &1887710108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887710103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b7afb24b032e234d8eeb34fd3c67565, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundPlayer: {fileID: 676537158}
 --- !u!1 &2017036744
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,13 +874,13 @@ MonoBehaviour:
           m_StringArgument: LevelsPanel
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1887710108}
-        m_TargetAssemblyTypeName: SFXAudio, Assembly-CSharp
-        m_MethodName: playThisSoundEffect
+      - m_Target: {fileID: 676537156}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
