@@ -6,6 +6,8 @@ using TMPro;
 using System;
 public class Timer : MonoBehaviour
 {
+    public int countdownTime;
+    public Text countdownDisplay;
     [SerializeField] GameObject TimesUpScreen;
     [SerializeField] TextMeshProUGUI timeText; 
     [SerializeField] float duration, currentTime;
@@ -18,6 +20,30 @@ public class Timer : MonoBehaviour
         timeText.text = currentTime.ToString();
         StartCoroutine(TimeIEn());
     }
+
+    private void start()
+    {
+        StartCoroutine(CountdownToStart());
+    }
+
+    IEnumerator CountdownToStart()
+    {
+        while (countdownTime > 0)
+        {
+            countdownDisplay.text = countdownTime.ToString();
+
+            yield return new WaitForSeconds(1f);
+
+            countdownTime--;
+        }
+
+        countdownDisplay.text = "GO!";
+
+        yield return new WaitForSeconds(1f);
+
+        countdownDisplay.gameObject.SetActive(false);
+    }
+
 
     IEnumerator TimeIEn()
     {
