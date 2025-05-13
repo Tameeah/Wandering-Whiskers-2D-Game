@@ -21,13 +21,14 @@ public class Interactable : MonoBehaviour
     {
         if (playerInRange && Input.GetKeyDown(interactKey))
         {
-            //Loade the next scene
+            Debug.Log("E key pressed - loading scene: " + nextSceneName);
             SceneManager.LoadScene(nextSceneName);
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Entered trigger with: " + other.name);
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
@@ -38,7 +39,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
