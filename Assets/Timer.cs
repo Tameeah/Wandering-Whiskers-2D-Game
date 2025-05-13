@@ -37,7 +37,9 @@ public class Timer : MonoBehaviour
             countdownTime--;
         }
 
-        countdownDisplay.text = "GO!";
+        countdownDisplay.text = " ";
+
+        Timer.instance.BeginTime();
 
         yield return new WaitForSeconds(1f);
 
