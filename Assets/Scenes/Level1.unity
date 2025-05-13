@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7821776539552112520, guid: 012f413c614453c439b5790f7282d803, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1056,7 +1060,6 @@ GameObject:
   - component: {fileID: 1972739179}
   - component: {fileID: 1972739181}
   - component: {fileID: 1972739180}
-  - component: {fileID: 1972739182}
   m_Layer: 5
   m_Name: Desk Background
   m_TagString: Untagged
@@ -1121,24 +1124,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972739178}
   m_CullTransparentMesh: 1
---- !u!114 &1972739182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972739178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21e97b3804ffc124b8d7986d1829483e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdownTime: 0
-  countdownDisplay: {fileID: 0}
-  TimesUpScreen: {fileID: 821342689}
-  timeText: {fileID: 0}
-  duration: 12
-  currentTime: 0
 --- !u!224 &1981657875 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4383960389431975556, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
