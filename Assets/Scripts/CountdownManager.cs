@@ -8,16 +8,18 @@ public class CountdownManager : MonoBehaviour
     [SerializeField] TMP_Text countdownText;
     [SerializeField] GameObject timesUpPanel;
     [SerializeField] TMP_Text timerText;
+    [SerializeField] float duration, currentTime;
 
 
     private float countdownTime = 3f;
     private bool isFirstCountdownDone = false;
     private bool isSecondCountdownStarted = false;
-    private float secondCountdownTime = 15f;
 
     void Start()
     {
         timesUpPanel.SetActive(false);
+        currentTime = duration;
+        timerText.text = currentTime.ToString();
         StartCoroutine(CountdownSequence());
     }
 
@@ -42,11 +44,11 @@ public class CountdownManager : MonoBehaviour
     {
         isSecondCountdownStarted = true;
 
-        while (secondCountdownTime > 0)
+        while (currentTime >=0)
         {
-            timerText.text = Mathf.Ceil(secondCountdownTime).ToString();
+            timerText.text = currentTime.ToString();
             yield return new WaitForSeconds(1f);
-            secondCountdownTime--;
+            currentTime--;
         }
 
         countdownText.text = "";
