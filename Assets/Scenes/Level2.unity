@@ -802,7 +802,6 @@ GameObject:
   - component: {fileID: 664363508}
   - component: {fileID: 664363507}
   - component: {fileID: 664363511}
-  - component: {fileID: 664363512}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -918,24 +917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c03d34a5dd44d4caf25dd4d3a1384e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &664363512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664363506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21e97b3804ffc124b8d7986d1829483e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdownTime: 0
-  countdownDisplay: {fileID: 0}
-  TimesUpScreen: {fileID: 369107079}
-  timeText: {fileID: 0}
-  duration: 15
-  currentTime: 0
 --- !u!1 &892027614
 GameObject:
   m_ObjectHideFlags: 0
