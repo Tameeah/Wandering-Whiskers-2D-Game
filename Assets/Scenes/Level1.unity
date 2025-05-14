@@ -1421,34 +1421,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379183811}
     m_Modifications:
-    - target: {fileID: 105889549968320208, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 105889549968320208, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 5000927251509650613, guid: 50c86656486ce7f499384dd3477c4a54, type: 3}
-    - target: {fileID: 824305521742271799, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_Name
-      value: Continue
-      objectReference: {fileID: 0}
-    - target: {fileID: 1465244655282400844, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1785953411562525315, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 14.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2976705888429410421, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_Name
-      value: Back
-      objectReference: {fileID: 0}
-    - target: {fileID: 4110961175421865738, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -188.9
-      objectReference: {fileID: 0}
     - target: {fileID: 4383960389431975556, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1529,25 +1501,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6305281189943039792, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -7459446148092876325, guid: da98f71fcf0bbb84b8070ac97aaa08f2, type: 3}
     - target: {fileID: 7055175753194344121, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 7055175753194344121, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8717895504022871079, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -187.4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8608587657169631877, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98b204fe412125049856cb6ff6b677f9, type: 3}

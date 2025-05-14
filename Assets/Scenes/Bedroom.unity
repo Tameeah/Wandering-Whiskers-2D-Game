@@ -7958,7 +7958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIcon: {fileID: 1484451523}
-  nextSceneName: TutorialLevel1
+  nextSceneName: TutorialLevel3
   interactKey: 101
 --- !u!60 &1070826450
 PolygonCollider2D:
@@ -12001,7 +12001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionIcon: {fileID: 1871015601}
-  nextSceneName: TutorialLevel1
+  nextSceneName: TutorialLevel2
   interactKey: 101
 --- !u!60 &1883406409
 PolygonCollider2D:
