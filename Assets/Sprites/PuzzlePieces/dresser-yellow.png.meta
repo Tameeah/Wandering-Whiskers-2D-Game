@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dresser-yellow_0: 2770159659925989583
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

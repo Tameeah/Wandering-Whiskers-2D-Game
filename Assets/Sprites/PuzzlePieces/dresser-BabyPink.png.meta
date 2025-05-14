@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dresser-BabyPink_0: 1950911486685345105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

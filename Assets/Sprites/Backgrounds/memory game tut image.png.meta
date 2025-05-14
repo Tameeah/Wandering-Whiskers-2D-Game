@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cc0d5e8daacf8b447b393542f941b803
+guid: ddaf7a07d6b9f1347a10e31ab44fd646
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2670914387589300776
-    second: dresser-red_0
+      213: 4624763394311170562
+    second: memory game tut image_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dresser-red_0
+      name: memory game tut image_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 6
-        width: 867
-        height: 254
+        x: 0
+        y: 0
+        width: 1072
+        height: 611
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8dd724ef3810fead0800000000000000
-      internalID: -2670914387589300776
+      spriteID: 20aa528ddc57e2040800000000000000
+      internalID: 4624763394311170562
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      dresser-red_0: -2670914387589300776
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
