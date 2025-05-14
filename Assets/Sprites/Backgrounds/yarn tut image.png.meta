@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 49910df9fd944c2479311b7719dac755
+guid: 37d96e4fcce6a5f45b20bdf31ad5c133
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 899301337017394882
-    second: desk for game_0
+      213: 6727217911193368724
+    second: yarn tut image_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: desk for game_0
+      name: yarn tut image_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1290
-        height: 830
+        width: 1252
+        height: 785
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c6a4f22dc5fa7c00800000000000000
-      internalID: 899301337017394882
+      spriteID: 49873534c01eb5d50800000000000000
+      internalID: 6727217911193368724
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      desk for game_0: 899301337017394882
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
