@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4ca5f9811fecb484d9f8b3aa07302c6d
+guid: cc0d5e8daacf8b447b393542f941b803
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4896219438416485856
-    second: ShelfBG_0
+      213: -2670914387589300776
+    second: dresser-red_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShelfBG_0
+      name: dresser-red_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 7
+        y: 6
+        width: 867
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0ed5d2153add2f340800000000000000
-      internalID: 4896219438416485856
+      spriteID: 8dd724ef3810fead0800000000000000
+      internalID: -2670914387589300776
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ShelfBG_0: 4896219438416485856
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
