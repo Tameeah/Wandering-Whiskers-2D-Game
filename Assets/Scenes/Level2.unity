@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 46302329}
   - component: {fileID: 46302328}
   m_Layer: 5
-  m_Name: SqaureHolder
+  m_Name: RedHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -164.04, y: 154.27}
-  m_SizeDelta: {x: 230.8566, y: 238.71}
+  m_AnchoredPosition: {x: 461.67, y: -12.4517}
+  m_SizeDelta: {x: 571.71, y: 159.728}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &46302328
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1843197933104017171, guid: 64fd2ce63f8f4f443bc199ffa7850083, type: 3}
+  m_Sprite: {fileID: -2670914387589300776, guid: cc0d5e8daacf8b447b393542f941b803, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 125478402}
   - component: {fileID: 125478404}
   m_Layer: 5
-  m_Name: triangle
+  m_Name: Peach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,8 +229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 157.60559, y: -245.5285}
-  m_SizeDelta: {x: 233.4735, y: 238.708}
+  m_AnchoredPosition: {x: -67, y: -63.578}
+  m_SizeDelta: {x: 281.9166, y: 206.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &125478402
 MonoBehaviour:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9164359298635338950, guid: 57c2056e927f5b94aa0be01990b8c3e2, type: 3}
+  m_Sprite: {fileID: -7896891273000179680, guid: cdd4a7f0904991349a5c74f81be8367f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -289,7 +289,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1687575460}
           m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
-          m_MethodName: Dragtriangle
+          m_MethodName: DragPeach
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -305,7 +305,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1687575460}
           m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
-          m_MethodName: Droptriangle
+          m_MethodName: DropPeach
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 385002664}
   - component: {fileID: 385002666}
   m_Layer: 5
-  m_Name: Leaf
+  m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,8 +450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167.24573, y: -245.53}
-  m_SizeDelta: {x: 224.4447, y: 288.1717}
+  m_AnchoredPosition: {x: -546, y: -63.578}
+  m_SizeDelta: {x: 577.77, y: 172.4619}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &385002664
 MonoBehaviour:
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7647240639167449756, guid: 56cb11fc1823fb346be9042c1e4dced5, type: 3}
+  m_Sprite: {fileID: 8995500763845963914, guid: b5c0cb9100955904fb64aada31d4a107, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -510,7 +510,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1687575460}
           m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
-          m_MethodName: Dragleaf
+          m_MethodName: DragOrange
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -526,7 +526,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1687575460}
           m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
-          m_MethodName: Dropleaf
+          m_MethodName: DropOrange
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -536,6 +536,81 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &394676831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394676832}
+  - component: {fileID: 394676834}
+  - component: {fileID: 394676833}
+  m_Layer: 5
+  m_Name: YellowHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &394676832
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394676831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 664363510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 461.67, y: -397.9226}
+  m_SizeDelta: {x: 571.7, y: 156.3431}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &394676833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394676831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5803922}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2770159659925989583, guid: 5a406dc5cd7852b45b4dbe32bf23696c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &394676834
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394676831}
+  m_CullTransparentMesh: 1
 --- !u!1 &408617541
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +624,7 @@ GameObject:
   - component: {fileID: 408617543}
   - component: {fileID: 408617545}
   m_Layer: 5
-  m_Name: Sqaure
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,8 +646,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 513.29706, y: -245.53}
-  m_SizeDelta: {x: 230.8566, y: 238.71}
+  m_AnchoredPosition: {x: -203.70996, y: -272}
+  m_SizeDelta: {x: 577.78, y: 170.0458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &408617543
 MonoBehaviour:
@@ -594,7 +669,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1843197933104017171, guid: 64fd2ce63f8f4f443bc199ffa7850083, type: 3}
+  m_Sprite: {fileID: -2670914387589300776, guid: cc0d5e8daacf8b447b393542f941b803, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -631,7 +706,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1687575460}
           m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
-          m_MethodName: Dragsquare
+          m_MethodName: DragRed
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -647,7 +722,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1687575460}
           m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
-          m_MethodName: Dropsquare
+          m_MethodName: DropRed
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -886,13 +961,15 @@ RectTransform:
   m_Children:
   - {fileID: 973186390}
   - {fileID: 1918996654}
-  - {fileID: 1412150699}
   - {fileID: 939235283}
   - {fileID: 46302327}
+  - {fileID: 1412150699}
+  - {fileID: 394676832}
   - {fileID: 2047400316}
-  - {fileID: 385002663}
   - {fileID: 125478401}
   - {fileID: 408617542}
+  - {fileID: 385002663}
+  - {fileID: 2100868178}
   - {fileID: 1495533896}
   - {fileID: 991881354}
   - {fileID: 1908684912}
@@ -1066,7 +1143,7 @@ GameObject:
   - component: {fileID: 939235285}
   - component: {fileID: 939235284}
   m_Layer: 5
-  m_Name: triangleHolder
+  m_Name: PeachHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1088,8 +1165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -511.54, y: 154.27}
-  m_SizeDelta: {x: 233.4735, y: 238.708}
+  m_AnchoredPosition: {x: 609.3484, y: 190.46002}
+  m_SizeDelta: {x: 276.3495, y: 204.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &939235284
 MonoBehaviour:
@@ -1111,7 +1188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9164359298635338950, guid: 57c2056e927f5b94aa0be01990b8c3e2, type: 3}
+  m_Sprite: {fileID: -7896891273000179680, guid: cdd4a7f0904991349a5c74f81be8367f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1186,7 +1263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5221500382852973428, guid: b5de0226bc1a81846b1aad34889a7076, type: 3}
+  m_Sprite: {fileID: -2810037537348956009, guid: 62a6d61eea2d56449ae5b7a7d828c54a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1378,7 +1455,7 @@ GameObject:
   - component: {fileID: 1412150701}
   - component: {fileID: 1412150700}
   m_Layer: 5
-  m_Name: LeafHolder
+  m_Name: OrangeHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1400,8 +1477,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 593, y: 164.74}
-  m_SizeDelta: {x: 224.4447, y: 288.1717}
+  m_AnchoredPosition: {x: 461.67, y: -207.6297}
+  m_SizeDelta: {x: 571.7, y: 164.0572}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1412150700
 MonoBehaviour:
@@ -1423,7 +1500,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7647240639167449756, guid: 56cb11fc1823fb346be9042c1e4dced5, type: 3}
+  m_Sprite: {fileID: 8995500763845963914, guid: b5c0cb9100955904fb64aada31d4a107, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1632,14 +1709,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3c428c4e529c5438eeef12cf5a973c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 2047400315}
-  leaf: {fileID: 385002662}
-  triangle: {fileID: 125478400}
-  square: {fileID: 408617541}
-  circleHolder: {fileID: 1918996653}
-  leafHolder: {fileID: 1412150698}
-  triangleHolder: {fileID: 939235282}
-  squareHolder: {fileID: 46302326}
+  pink: {fileID: 2047400315}
+  orange: {fileID: 385002662}
+  peach: {fileID: 125478400}
+  red: {fileID: 408617541}
+  yellow: {fileID: 2100868177}
+  pinkHolder: {fileID: 1918996653}
+  orangeHolder: {fileID: 1412150698}
+  peachHolder: {fileID: 939235282}
+  redHolder: {fileID: 46302326}
+  yellowHolder: {fileID: 394676831}
 --- !u!4 &1687575461
 Transform:
   m_ObjectHideFlags: 0
@@ -1683,7 +1762,7 @@ GameObject:
   - component: {fileID: 1918996656}
   - component: {fileID: 1918996655}
   m_Layer: 5
-  m_Name: CircleHolder
+  m_Name: PinkHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1705,8 +1784,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 348.3, y: 12}
-  m_SizeDelta: {x: 246.5594, y: 259.64}
+  m_AnchoredPosition: {x: 314.709, y: 190.46}
+  m_SizeDelta: {x: 277.7893, y: 204.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918996655
 MonoBehaviour:
@@ -1728,7 +1807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6231044458718751821, guid: 639c77a7e740d704da1168880ba62906, type: 3}
+  m_Sprite: {fileID: 1950911486685345105, guid: 723edf4c800e81247b3c22927b2c6da3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1759,7 +1838,7 @@ GameObject:
   - component: {fileID: 2047400317}
   - component: {fileID: 2047400319}
   m_Layer: 5
-  m_Name: Circle
+  m_Name: Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1781,8 +1860,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -505, y: -256}
-  m_SizeDelta: {x: 246.5594, y: 259.64}
+  m_AnchoredPosition: {x: -729.78, y: -272}
+  m_SizeDelta: {x: 281.1725, y: 206.2785}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047400317
 MonoBehaviour:
@@ -1804,7 +1883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6231044458718751821, guid: 639c77a7e740d704da1168880ba62906, type: 3}
+  m_Sprite: {fileID: 1950911486685345105, guid: 723edf4c800e81247b3c22927b2c6da3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1841,7 +1920,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1687575460}
           m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
-          m_MethodName: Dragcircle
+          m_MethodName: DragPink
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1857,7 +1936,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1687575460}
           m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
-          m_MethodName: Dropcircle
+          m_MethodName: DropPink
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1867,6 +1946,127 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &2100868177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100868178}
+  - component: {fileID: 2100868181}
+  - component: {fileID: 2100868180}
+  - component: {fileID: 2100868179}
+  m_Layer: 5
+  m_Name: Yellow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2100868178
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100868177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 664363510}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -427, y: 152.44}
+  m_SizeDelta: {x: 577.78, y: 170.0458}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2100868179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100868177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1687575460}
+          m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+          m_MethodName: DragYellow
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1687575460}
+          m_TargetAssemblyTypeName: PuzzleManager, Assembly-CSharp
+          m_MethodName: DropYellow
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &2100868180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100868177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2770159659925989583, guid: 5a406dc5cd7852b45b4dbe32bf23696c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2100868181
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100868177}
+  m_CullTransparentMesh: 1
 --- !u!1001 &84909608430856336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1881,7 +2081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2013053560532274435, guid: 012f413c614453c439b5790f7282d803, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6439013212952286901, guid: 012f413c614453c439b5790f7282d803, type: 3}
       propertyPath: m_Pivot.x
@@ -1962,6 +2162,22 @@ PrefabInstance:
     - target: {fileID: 6439013212952286901, guid: 012f413c614453c439b5790f7282d803, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821776539552112520, guid: 012f413c614453c439b5790f7282d803, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.31902453
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821776539552112520, guid: 012f413c614453c439b5790f7282d803, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.48592734
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821776539552112520, guid: 012f413c614453c439b5790f7282d803, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.6528301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7821776539552112520, guid: 012f413c614453c439b5790f7282d803, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4283530406
       objectReference: {fileID: 0}
     - target: {fileID: 7821776539552112520, guid: 012f413c614453c439b5790f7282d803, type: 3}
       propertyPath: m_HorizontalAlignment

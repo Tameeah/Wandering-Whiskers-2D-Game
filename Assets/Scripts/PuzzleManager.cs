@@ -4,83 +4,101 @@ using System.Collections;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public GameObject circle,leaf,triangle,square,circleHolder,leafHolder,triangleHolder,squareHolder;
+    public GameObject pink,orange,peach,red,yellow,pinkHolder,orangeHolder,peachHolder,redHolder, yellowHolder;
 
-    Vector2 circleInitialPos, leafInitialPos, triangleInitialPos, squareInitialPos;
+    Vector2 pinkInitialPos, orangeInitialPos, peachInitialPos, redInitialPos, yellowInitialPos;
 
     void Start()
     {
-        circleInitialPos = circle.transform.position;
-        leafInitialPos = leaf.transform.position;
-        triangleInitialPos = triangle.transform.position;
-        squareInitialPos = square.transform.position;
+        pinkInitialPos = pink.transform.position;
+        orangeInitialPos = orange.transform.position;
+        peachInitialPos = peach.transform.position;
+        redInitialPos = red.transform.position;
+        yellowInitialPos = yellow.transform.position;
     }
-    public void Dragcircle()
+    public void DragPink()
     {
-        circle.transform.position = Input.mousePosition;
-    }
-
-    public void Dragleaf()
-    {
-        leaf.transform.position = Input.mousePosition;
+        pink.transform.position = Input.mousePosition;
     }
 
-    public void Dragtriangle()
+    public void DragOrange()
     {
-        triangle.transform.position = Input.mousePosition;
+        orange.transform.position = Input.mousePosition;
     }
 
-    public void Dragsquare()
+    public void DragPeach()
     {
-        square.transform.position = Input.mousePosition;
+        peach.transform.position = Input.mousePosition;
     }
 
-    public void Dropcircle()
+    public void DragRed()
     {
-        float Distance = Vector3.Distance(circle.transform.position, circleHolder.transform.position);
+        red.transform.position = Input.mousePosition;
+    }
+
+    public void DragYellow()
+    {
+        yellow.transform.position = Input.mousePosition;
+    }
+
+    public void DropPink()
+    {
+        float Distance = Vector3.Distance(pink.transform.position, pinkHolder.transform.position);
         if(Distance <50)
         {
-            circle.transform.position = circleHolder.transform.position;
+            pink.transform.position = pinkHolder.transform.position;
         }
         else
         {
-            circle.transform.position = circleInitialPos;
+            pink.transform.position = pinkInitialPos;
         }
     }
-    public void Dropleaf()
+    public void DropOrange()
     {
-        float Distance = Vector3.Distance(leaf.transform.position, leafHolder.transform.position);
+        float Distance = Vector3.Distance(orange.transform.position, orangeHolder.transform.position);
         if (Distance < 50)
         {
-            leaf.transform.position = leafHolder.transform.position;
+            orange.transform.position = orangeHolder.transform.position;
         }
         else
         {
-            leaf.transform.position = leafInitialPos;
+            orange.transform.position = orangeInitialPos;
         }
     }
-    public void Droptriangle()
+    public void DropPeach()
     {
-        float Distance = Vector3.Distance(triangle.transform.position, triangleHolder.transform.position);
+        float Distance = Vector3.Distance(peach.transform.position, peachHolder.transform.position);
         if (Distance < 50)
         {
-            triangle.transform.position = triangleHolder.transform.position;
+            peach.transform.position = peachHolder.transform.position;
         }
         else
         {
-            triangle.transform.position = triangleInitialPos;
+            peach.transform.position = peachInitialPos;
         }
     }
-    public void Dropsquare()
+    public void DropRed()
     {
-        float Distance = Vector3.Distance(square.transform.position, squareHolder.transform.position);
+        float Distance = Vector3.Distance(red.transform.position, redHolder.transform.position);
         if (Distance < 50)
         {
-            square.transform.position = squareHolder.transform.position;
+            red.transform.position = redHolder.transform.position;
         }
         else
         {
-            square.transform.position = squareInitialPos;
+            red.transform.position = redInitialPos;
+        }
+    }
+    public void DropYellow()
+    {
+        float Distance = Vector3.Distance(yellow.transform.position, yellowHolder.transform.position);
+        if (Distance < 50)
+        {
+            yellow.transform.position = yellowHolder.transform.position;
+        }
+        else
+        {
+            yellow.transform.position = yellowInitialPos;
         }
     }
 }

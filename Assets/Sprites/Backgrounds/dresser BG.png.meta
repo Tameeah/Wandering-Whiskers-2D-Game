@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b5de0226bc1a81846b1aad34889a7076
+guid: 62a6d61eea2d56449ae5b7a7d828c54a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5221500382852973428
-    second: Dresser background_0
+      213: -2810037537348956009
+    second: dresser BG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dresser background_0
+      name: dresser BG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 473848afeee767840800000000000000
-      internalID: 5221500382852973428
+      spriteID: 7905dcc7fbdb009d0800000000000000
+      internalID: -2810037537348956009
       vertices: []
       indices: 
       edges: []
