@@ -7,8 +7,9 @@ public class ButtonAudio : MonoBehaviour
 
     public enum ButtonSoundType
     {
-        regular,
+        click,
         game,
+        spider,
     }
 
     void Start()
@@ -21,11 +22,14 @@ public class ButtonAudio : MonoBehaviour
 
         switch (soundType)
         {
-            case ButtonSoundType.regular:
+            case ButtonSoundType.click:
                 audioSource.PlayOneShot(Clips[0]);
                 break;
             case ButtonSoundType.game:
                 audioSource.PlayOneShot(Clips[1]);
+                break;
+            case ButtonSoundType.spider:
+                audioSource.PlayOneShot(Clips[2]);
                 break;
         }
     }
