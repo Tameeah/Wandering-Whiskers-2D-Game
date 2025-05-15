@@ -1,11 +1,18 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void GoToScene(string sceneName)
+    public void ChangesSceneWithDelay(string sceneName)
     {
-       SceneManager.LoadScene(sceneName);
+        StartCoroutine(LoadSceneAfterDelay(sceneName));
+    }
+
+    IEnumerator LoadSceneAfterDelay(string sceneName)
+    {
+        yield return new WaitForSeconds(0.3f);  // Let sound finish
+        SceneManager.LoadScene(sceneName);
     }
 
     public void QuitApp()

@@ -210,7 +210,6 @@ GameObject:
   - component: {fileID: 397368410}
   - component: {fileID: 397368409}
   - component: {fileID: 397368408}
-  - component: {fileID: 397368407}
   m_Layer: 5
   m_Name: 'Bedroom - Button '
   m_TagString: Untagged
@@ -238,18 +237,6 @@ RectTransform:
   m_AnchoredPosition: {x: -251.59998, y: -46.462433}
   m_SizeDelta: {x: 540.2212, y: 290.2903}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &397368407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397368405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c03d34a5dd44d4caf25dd4d3a1384e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &397368408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,9 +281,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 397368407}
+      - m_Target: {fileID: 1239430569}
+        m_TargetAssemblyTypeName: ButtonAudio, Assembly-CSharp
+        m_MethodName: PlayAssignedSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 687691577}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: GoToScene
+        m_MethodName: ChangesSceneWithDelay
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -344,6 +343,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397368405}
   m_CullTransparentMesh: 1
+--- !u!1001 &499496844
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1068115326557022837, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_Name
+      value: ButtonAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1001.18176
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 512.56104
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.3938622
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086028473546605410, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
 --- !u!1 &520238888
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +667,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187983899}
   m_CullTransparentMesh: 1
+--- !u!114 &1239430569 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7913945525965471360, guid: 72a599afbec30754e84f656dd3710e84, type: 3}
+  m_PrefabInstance: {fileID: 499496844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbeef1c5354e4345bf643b0383d6130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1949782496
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +829,7 @@ GameObject:
   - component: {fileID: 1969424463}
   - component: {fileID: 1969424462}
   m_Layer: 5
-  m_Name: MainMenu
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,9 +910,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1969424462}
+      - m_Target: {fileID: 1239430569}
+        m_TargetAssemblyTypeName: ButtonAudio, Assembly-CSharp
+        m_MethodName: PlayAssignedSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 687691577}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: GoToScene
+        m_MethodName: ChangesSceneWithDelay
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -900,3 +979,4 @@ SceneRoots:
   - {fileID: 1949782499}
   - {fileID: 371559787}
   - {fileID: 687691573}
+  - {fileID: 499496844}
