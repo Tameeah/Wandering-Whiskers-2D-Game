@@ -1,4 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System; 
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -14,7 +19,7 @@ public class PuzzleManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void PiecesPlaced()
+    public void PiecesPlacedCorrectly()
     {
         piecesPlaced++;
 
@@ -27,7 +32,7 @@ public class PuzzleManager : MonoBehaviour
     {
         level2Ended = true;
         Debug.Log("Level Complete! You earned a reward!");
-        UIManager.Instance.ShowWinPanel(); // Show win UI
+        UIManager.Instance.ShowWinPanel(); 
     }
 
     public void Level2Failed()
@@ -35,7 +40,7 @@ public class PuzzleManager : MonoBehaviour
         if (!level2Ended)
         {
             level2Ended = true;
-            Debug.Log("Level Failed! Not all spiders were caught.");
+            Debug.Log("Level Failed! Not all pieces were placed.");
         }
     }
 }

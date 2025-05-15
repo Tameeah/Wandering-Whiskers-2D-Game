@@ -5,6 +5,7 @@ using System.Collections;
 
 public class CountdownManager : MonoBehaviour
 {
+    public static CountdownManager Instance;
     [SerializeField] TMP_Text countdownText;
     [SerializeField] GameObject timesUpPanel;
     [SerializeField] TMP_Text timerText;
@@ -14,6 +15,12 @@ public class CountdownManager : MonoBehaviour
     private float countdownTime = 3f;
     private bool isFirstCountdownDone = false;
     private bool isSecondCountdownStarted = false;
+
+    void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
 
     void Start()
     {
