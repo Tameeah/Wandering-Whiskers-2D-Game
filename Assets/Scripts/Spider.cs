@@ -35,6 +35,6 @@ public class Spider : MonoBehaviour
     {
         isDead = true;
         gameObject.SetActive(false);
-        GameManager.instance.SpidersDestroyed();
+        SpiderManager.instance.SpidersDestroyed();
     }
 }

@@ -17,11 +17,6 @@ public class UIManager : MonoBehaviour
     {
         winPanel.SetActive(true);
     }
-
-    public void ShowFailPanel()
-    {
-        failPanel.SetActive(true);
-    }
 }
 
 

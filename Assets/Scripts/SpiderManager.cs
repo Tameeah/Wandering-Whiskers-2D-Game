@@ -1,40 +1,47 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class SpiderManager : MonoBehaviour  
+public class SpiderManager : MonoBehaviour
 {
-    public GameObject[] spiderPrefabs;
-
-    public Spider curSpider;
-
-    public Transform canvas;
-
     public static SpiderManager instance;
+
+    private int totalSpiders = 3;
+    private int spidersDestroyed = 0;
+    private bool level1Ended = false;
 
     void Awake()
     {
-        instance = this;
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
 
-    //Spawn Spider
-    public void SpawnSpider()
+    public void SpidersDestroyed()
     {
-        GameObject spiderToSpawn = spiderPrefabs[3];
-        spiderPrefabs[3] = null;
-        spiderToSpawn.SetActive(false);
-        GameObject obj = Instantiate(spiderToSpawn, canvas);
+        spidersDestroyed++;
 
-        curSpider = obj.GetComponent<Spider>();
+        if(spidersDestroyed >= totalSpiders)
+        {
+            Level1Complete();
+        }
     }
 
-
-    //Replace Spider 
-
-    public void ReplaceSpider(GameObject spider)
+    void Level1Complete()
     {
-        Destroy(spider);
-        SpawnSpider();
+        level1Ended = true;
+        Debug.Log("Level Complete! You earned a reward!");
+        UIManager.Instance.ShowWinPanel(); // Show win UI
     }
+
+    public void Level1Failed()
+    {
+        if (!level1Ended)
+        {
+            level1Ended = true;
+            Debug.Log("Level Failed! Not all spiders were caught.");
+        }
+    }
+
 }
-
