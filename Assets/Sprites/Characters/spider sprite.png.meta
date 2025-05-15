@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4aead6a62b16606438fb89ead2fe4c32
+guid: 5ecabee068949b142b2f647f6f2c428c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7341407202210888751
-    second: door_0
+      213: 2415233319287123937
+    second: spider sprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_0
+      name: spider sprite_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 37
-        width: 48
-        height: 185
+        x: 481
+        y: 466
+        width: 375
+        height: 315
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d3c9b8cb051e1a90800000000000000
-      internalID: -7341407202210888751
+      spriteID: 1efebcd48e1a48120800000000000000
+      internalID: 2415233319287123937
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      door_0: -7341407202210888751
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
