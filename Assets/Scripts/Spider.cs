@@ -2,34 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Spider : MonoBehaviour
 {
     public int curHp;
-
     public int maxHp;
-
-    public int spidersCaught;
-
+    private bool isDead = false;
     public Image healthBarFill;
+    public GameObject[] spiderPrefabs;
 
-    public GameObject[] spiderPrefabs; 
+    public void Start()
+    {
+        curHp = maxHp;
+    }
+
 
     public void Damage()
     {
+        if (isDead) return;
+
         curHp--;
         healthBarFill.fillAmount = (float)curHp / (float)maxHp;
 
         if (curHp <= 0)
         {
-            Caught();
+            Die();
         }
     }
 
-    public void Caught()
+    public void Die()
     {
-        GameManager.instance.AddSpiders(spidersCaught);
-        SpiderManager.instance.ReplaceSpider(gameObject);
+        isDead = true;
+        gameObject.SetActive(false);
+        GameManager.instance.SpidersDestroyed();
     }
-
 }

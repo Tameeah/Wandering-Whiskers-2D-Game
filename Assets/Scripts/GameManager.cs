@@ -6,27 +6,43 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public int caughtSpiders;
-
-    public TextMeshProUGUI caughtText;
-
     public static GameManager instance;
+
+    private int totalSpiders = 3;
+    private int spidersDestroyed = 0;
+    private bool level1Ended = false;
 
     void Awake()
     {
-        instance = this;
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
     }
 
-    public void AddSpiders(int amount)
+    public void SpidersDestroyed()
     {
-        caughtSpiders += amount;
-        caughtText.text = "Spiders Caught" + caughtSpiders.ToString();
+        spidersDestroyed++;
+
+        if(spidersDestroyed >= totalSpiders)
+        {
+            Level1Complete();
+        }
     }
 
-    public void RemoveSpiders(int amount)
+    void Level1Complete()
     {
-        caughtSpiders -= amount;
-        caughtText.text = "Spiders Caught" + caughtSpiders.ToString();
+        level1Ended = true;
+        Debug.Log("Level Complete! You earned a reward!");
+        UIManager.Instance.ShowWinPanel(); // Show win UI
+    }
+
+    public void Level1Failed()
+    {
+        if (!level1Ended)
+        {
+            level1Ended = true;
+            Debug.Log("Level Failed! Not all spiders were caught.");
+            UIManager.Instance.ShowFailPanel(); // Show fail UI
+        }
     }
 
 }
