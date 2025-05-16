@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] Animator transitionAnim;
     public void ChangesSceneWithDelay(string sceneName)
     {
         StartCoroutine(LoadSceneAfterDelay(sceneName));
@@ -11,8 +12,10 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator LoadSceneAfterDelay(string sceneName)
     {
+        transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(0.3f);  // Let sound finish
         SceneManager.LoadScene(sceneName);
+        transitionAnim.SetTrigger("start");
     }
 
     public void QuitApp()
