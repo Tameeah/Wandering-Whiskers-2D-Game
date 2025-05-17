@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 18122b6945b42ea4187b249b749cc50a
+guid: e18dd61ecaaaaff4fa0ebaedb1e80ff8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3366250057532810143
-    second: memory game tut image v2_0
+      213: -2350284869373673000
+    second: mainMenu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: memory game tut image v2_0
+      name: mainMenu_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1072
-        height: 611
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f93a168979257be20800000000000000
-      internalID: 3366250057532810143
+      spriteID: 8d1c1081d5c126fd0800000000000000
+      internalID: -2350284869373673000
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      memory game tut image v2_0: 3366250057532810143
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

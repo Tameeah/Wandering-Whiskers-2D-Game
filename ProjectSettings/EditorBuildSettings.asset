@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialMovement.unity
     guid: 52198d5d8b817ff4cb0ef8d980cbe390
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: d0fbf927a60476b4e8c1f3b27da6d94a
   - enabled: 1
