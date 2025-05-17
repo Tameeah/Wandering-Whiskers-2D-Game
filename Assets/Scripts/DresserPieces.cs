@@ -40,7 +40,7 @@ public class DresserPieces : MonoBehaviour, IDragHandler, IBeginDragHandler, IEn
             if (!isPlacedCorrectly)
             {
                 isPlacedCorrectly = true;
-                puzzleManager.PiecesPlacedCorrectly();
+                puzzleManager.PiecePlacedCorrectly();
             }
         }
         else

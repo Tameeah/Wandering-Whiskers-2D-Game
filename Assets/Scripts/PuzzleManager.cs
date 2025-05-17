@@ -20,7 +20,7 @@ public class PuzzleManager : MonoBehaviour
         winPanel.SetActive(false);
     }
 
-    public void PiecesPlacedCorrectly()
+    public void PiecePlacedCorrectly()
     {
         correctPieces++;
 
