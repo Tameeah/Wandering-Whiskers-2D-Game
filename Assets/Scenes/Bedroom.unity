@@ -10629,6 +10629,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8734020920307593325, guid: 8e0c95cfabef95a49badabdb314b5601, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734020920307593325, guid: 8e0c95cfabef95a49badabdb314b5601, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734020920307593325, guid: 8e0c95cfabef95a49badabdb314b5601, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8734020920307593325, guid: 8e0c95cfabef95a49badabdb314b5601, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
