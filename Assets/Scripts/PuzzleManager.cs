@@ -1,50 +1,70 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System; 
 
 public class PuzzleManager : MonoBehaviour
 {
-    [SerializeField] DresserPieces[] dresserPieces;
-    [SerializeField] GameObject winPanel;
-    [SerializeField] AudioSource applauseSound;
-    [SerializeField] AudioSource sadSound;
+    public static PuzzleManager Instance;
 
-    private int correctPieces = 0;
+    public GameObject winPanel;
+    public GameObject losePanel;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    public float maxTime = 20f;
+
+    private int piecesPlaced = 0;
+    private AudioSource audioSource;
+    private float timer;
     private bool level2Ended = false;
+
+    void Awake()
+    {
+        if (Instance == null) Instance = this;
+    }
 
     void Start()
     {
-        winPanel.SetActive(false);
+        timer = maxTime;
+        audioSource = GetComponent<AudioSource>();
     }
 
-    public void PiecePlacedCorrectly()
+    void Update()
     {
-        correctPieces++;
+        if (level2Ended) return;
 
-        if (correctPieces == dresserPieces.Length && !level2Ended)
+        timer -= Time.deltaTime;
+        if (timer <= 0)
         {
-            EndLevel2(true);
+            LoseGame();
         }
     }
 
-    public void PieceRemovedFromCorrect()
+    public void PiecePlaced()
     {
-        correctPieces--;
+        piecesPlaced++;
+        if (piecesPlaced >= 5)
+        {
+            WinGame();
+        }
     }
 
-    private void EndLevel2(bool won)
+    private void WinGame()
     {
         level2Ended = true;
+        winPanel.SetActive(true);
+        audioSource.PlayOneShot(winSound);
+        Debug.Log("Level 2 Complete!");
+        // Here you can trigger the next level logic
+    }
 
-        if (won)
-        {
-            winPanel.SetActive(true);
-            applauseSound.Play();
-        }
+    private void LoseGame()
+    {
+        level2Ended = true;
+        losePanel.SetActive(true);
+        audioSource.PlayOneShot(loseSound);
+        Debug.Log("Level 2 Failed.");
     }
 }
+
+
 
 

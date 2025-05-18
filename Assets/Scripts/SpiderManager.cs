@@ -7,18 +7,39 @@ using TMPro;
 public class SpiderManager : MonoBehaviour
 {
     public static SpiderManager instance;
+    
+    public GameObject winPanel;
+    public GameObject losePanel;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    public float maxTime = 20f;
 
     private int totalSpiders = 3;
     private int spidersDestroyed = 0;
+    private AudioSource audioSource;
+    private float timer;
     private bool level1Ended = false;
-    public ParticleSystem winParticlesRHS;
-    public ParticleSystem winParticlesLHS;
-
-
+    
     void Awake()
     {
         if (instance == null) instance = this;
-        else Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        timer = maxTime;
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    void Update()
+    {
+        if (level1Ended) return;
+
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            LoseGame();
+        }
     }
 
     public void SpidersDestroyed()
@@ -27,26 +48,25 @@ public class SpiderManager : MonoBehaviour
 
         if(spidersDestroyed >= totalSpiders)
         {
-            Level1Complete();
+            WinGame();
         }
     }
 
-    void Level1Complete()
+    private void WinGame()
     {
         level1Ended = true;
-        Debug.Log("Level Complete! You earned a reward!");
-        UIManager.Instance.ShowWinPanel(); // Show win UI
-        winParticlesLHS.Play();
-        winParticlesRHS.Play();
+        winPanel.SetActive(true);
+        audioSource.PlayOneShot(winSound);
+        Debug.Log("Level 1 Complete!");
+        // Here you can trigger the next level logic
     }
 
-    public void Level1Failed()
+    private void LoseGame()
     {
-        if (!level1Ended)
-        {
-            level1Ended = true;
-            Debug.Log("Level Failed! Not all spiders were caught.");
-        }
+        level1Ended = true;
+        losePanel.SetActive(true);
+        audioSource.PlayOneShot(loseSound);
+        Debug.Log("Level 1 Failed.");
     }
 
 }
