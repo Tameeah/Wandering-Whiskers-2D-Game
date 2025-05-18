@@ -9,11 +9,9 @@ public class CountdownManager : MonoBehaviour
     [SerializeField] TMP_Text countdownText;
     [SerializeField] TMP_Text timerText;
     [SerializeField] float duration, currentTime;
-    [SerializeField] AudioSource loseSound;
-    [SerializeField] AudioSource winSound;
 
 
-    private float countdownTime = 3f;
+    public float countdownTime = 15f;
     private bool isFirstCountdownDone = false;
     private bool isSecondCountdownStarted = false;
 

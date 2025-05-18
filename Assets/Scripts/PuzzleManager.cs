@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,15 +17,43 @@ public class PuzzleManager : MonoBehaviour
     private float timer;
     private bool level2Ended = false;
 
-    void Awake()
-    {
-        if (Instance == null) Instance = this;
-    }
+    public GameObject puzzlePreview; 
+    public float previewDuration = 5f; 
+    public GameObject[] puzzlePieces; 
 
     void Start()
     {
+        Instance = this;
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
+
+        // Show preview and disable pieces
+        puzzlePreview.SetActive(true);
+        SetPuzzlePiecesActive(false);
+
+        // Hide preview after delay
+        StartCoroutine(HidePreviewAndStartGame());
+    }
+
+    private IEnumerator HidePreviewAndStartGame()
+    {
+        yield return new WaitForSeconds(previewDuration);
+
+        puzzlePreview.SetActive(false);
+        SetPuzzlePiecesActive(true);
+    }
+
+    private void SetPuzzlePiecesActive(bool active)
+    {
+        foreach (GameObject piece in puzzlePieces)
+        {
+            piece.GetComponent<CanvasGroup>().blocksRaycasts = active;
+        }
+    }
+
+    void Awake()
+    {
+        if (Instance == null) Instance = this;
     }
 
     void Update()
