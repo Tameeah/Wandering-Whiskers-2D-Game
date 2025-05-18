@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tracing game tutorial image_0: -3975876718211376407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
