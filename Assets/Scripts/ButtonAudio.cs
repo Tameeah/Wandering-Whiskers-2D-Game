@@ -10,6 +10,7 @@ public class ButtonAudio : MonoBehaviour
         click,
         game,
         spider,
+        Dresser,
     }
 
     void Start()
@@ -30,6 +31,9 @@ public class ButtonAudio : MonoBehaviour
                 break;
             case ButtonSoundType.spider:
                 audioSource.PlayOneShot(Clips[2]);
+                break;
+            case ButtonSoundType.Dresser:
+                audioSource.PlayOneShot(Clips[3]);
                 break;
         }
     }

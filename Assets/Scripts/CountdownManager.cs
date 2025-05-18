@@ -10,6 +10,7 @@ public class CountdownManager : MonoBehaviour
     [SerializeField] GameObject timesUpPanel;
     [SerializeField] TMP_Text timerText;
     [SerializeField] float duration, currentTime;
+    [SerializeField] AudioSource sadSound;
 
 
     private float countdownTime = 3f;
@@ -60,6 +61,7 @@ public class CountdownManager : MonoBehaviour
 
         countdownText.text = "";
         timesUpPanel.SetActive(true);
+        sadSound.Play();
     }
 }
 

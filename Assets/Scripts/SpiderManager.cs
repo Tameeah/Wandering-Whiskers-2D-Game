@@ -11,6 +11,9 @@ public class SpiderManager : MonoBehaviour
     private int totalSpiders = 3;
     private int spidersDestroyed = 0;
     private bool level1Ended = false;
+    public ParticleSystem winParticlesRHS;
+    public ParticleSystem winParticlesLHS;
+
 
     void Awake()
     {
@@ -33,6 +36,8 @@ public class SpiderManager : MonoBehaviour
         level1Ended = true;
         Debug.Log("Level Complete! You earned a reward!");
         UIManager.Instance.ShowWinPanel(); // Show win UI
+        winParticlesLHS.Play();
+        winParticlesRHS.Play();
     }
 
     public void Level1Failed()

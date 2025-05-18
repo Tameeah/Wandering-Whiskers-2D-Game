@@ -1,49 +1,58 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DresserPieces : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    public Transform correctSlot;
-    public float snapThreshold = 50f;
-    private RectTransform rectTransform;
-    private CanvasGroup canvasGroup;
-    private Canvas canvas;
-    private bool isPlaced = false;
+    public RectTransform targetPosition;
+    public float snapDistance = 50f;
 
+    private Vector3 originalPosition;
+    private bool isPlacedCorrectly = false;
+    private Canvas canvas;
+    private PuzzleManager puzzleManager;
+
+    [System.Obsolete]
     void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>();
+        originalPosition = transform.position;
         canvas = GetComponentInParent<Canvas>();
+        puzzleManager = FindObjectOfType<PuzzleManager>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (isPlaced) return;
-        canvasGroup.blocksRaycasts = false;
+        if (isPlacedCorrectly) return;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (isPlaced) return;
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        if (isPlacedCorrectly) return;
+
+        transform.position += (Vector3)eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        canvasGroup.blocksRaycasts = true;
-
-        if (isPlaced) return;
-
-        float distance = Vector3.Distance(rectTransform.position, correctSlot.position);
-        if (distance <= snapThreshold)
+        if (Vector3.Distance(transform.position, targetPosition.position) < snapDistance)
         {
-            rectTransform.position = correctSlot.position;
-            isPlaced = true;
-            PuzzleManager.instance.PiecesPlacedCorrectly();
+            transform.position = targetPosition.position;
+
+            if (!isPlacedCorrectly)
+            {
+                isPlacedCorrectly = true;
+                puzzleManager.PiecePlacedCorrectly();
+            }
+        }
+        else
+        {
+            if (isPlacedCorrectly)
+            {
+                isPlacedCorrectly = false;
+                puzzleManager.PieceRemovedFromCorrect();
+            }
+
+            transform.position = originalPosition;
         }
     }
+
 }
-
-
-

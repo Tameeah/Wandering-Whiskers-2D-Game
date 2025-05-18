@@ -7,40 +7,44 @@ using System;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public static PuzzleManager instance;
+    [SerializeField] DresserPieces[] dresserPieces;
+    [SerializeField] GameObject winPanel;
+    [SerializeField] AudioSource applauseSound;
+    [SerializeField] AudioSource sadSound;
 
-    private int totalPieces = 5;
-    private int piecesPlaced = 0;
+    private int correctPieces = 0;
     private bool level2Ended = false;
 
-    void Awake()
+    void Start()
     {
-        if (instance == null) instance = this;
-        else Destroy(gameObject);
+        winPanel.SetActive(false);
     }
 
-    public void PiecesPlacedCorrectly()
+    public void PiecePlacedCorrectly()
     {
-        piecesPlaced++;
+        correctPieces++;
 
-        if (piecesPlaced >= totalPieces)
+        if (correctPieces == dresserPieces.Length && !level2Ended)
         {
-            Level2Complete();
+            EndLevel2(true);
         }
     }
-    void Level2Complete()
+
+    public void PieceRemovedFromCorrect()
     {
-        level2Ended = true;
-        Debug.Log("Level Complete! You earned a reward!");
-        UIManager.Instance.ShowWinPanel(); 
+        correctPieces--;
     }
 
-    public void Level2Failed()
+    private void EndLevel2(bool won)
     {
-        if (!level2Ended)
+        level2Ended = true;
+
+        if (won)
         {
-            level2Ended = true;
-            Debug.Log("Level Failed! Not all pieces were placed.");
+            winPanel.SetActive(true);
+            applauseSound.Play();
         }
     }
 }
+
+
