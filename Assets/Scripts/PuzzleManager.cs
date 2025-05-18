@@ -19,7 +19,9 @@ public class PuzzleManager : MonoBehaviour
 
     public GameObject puzzlePreview; 
     public float previewDuration = 5f; 
-    public GameObject[] puzzlePieces; 
+    public GameObject[] puzzlePieces;
+
+    public ParticleSystem winParticles;
 
     void Start()
     {
@@ -81,8 +83,12 @@ public class PuzzleManager : MonoBehaviour
         level2Ended = true;
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound);
+
+        if (winParticles != null)
+        {
+            winParticles.Play();
+        }
         Debug.Log("Level 2 Complete!");
-        // Here you can trigger the next level logic
     }
 
     private void LoseGame()

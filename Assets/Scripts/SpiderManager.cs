@@ -58,7 +58,7 @@ public class SpiderManager : MonoBehaviour
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound);
         Debug.Log("Level 1 Complete!");
-        // Here you can trigger the next level logic
+  
     }
 
     private void LoseGame()

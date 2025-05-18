@@ -1163,6 +1163,10 @@ PrefabInstance:
       propertyPath: countdownText
       value: 
       objectReference: {fileID: 994062087}
+    - target: {fileID: 4214569927394766524, guid: 9e949dfe1b8a92048afdd6bd8243de80, type: 3}
+      propertyPath: countdownTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4308305144929803598, guid: 9e949dfe1b8a92048afdd6bd8243de80, type: 3}
       propertyPath: m_LocalPosition.x
       value: 967.6475
