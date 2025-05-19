@@ -50,7 +50,10 @@ public class BadgeManager : MonoBehaviour
         }
     }
 
-    internal void WinGame(int v) => throw new NotImplementedException();
+    internal void WinGame(int v)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 

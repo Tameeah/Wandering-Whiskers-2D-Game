@@ -77,8 +77,10 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    public void OnLevel2Complete() => bedroomRoundManager.CompleteLevel(2);
-
+    public void OnLevel2Complete()
+    {
+        bedroomRoundManager.CompleteLevel(2);
+    }
 
     private void WinGame()
     {
