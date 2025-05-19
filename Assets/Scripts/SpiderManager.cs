@@ -7,6 +7,9 @@ using TMPro;
 public class SpiderManager : MonoBehaviour
 {
     public static SpiderManager instance;
+
+    public ParticleSystem winParticlesLHS;
+    public ParticleSystem winParticlesRHS;
     
     public GameObject winPanel;
     public GameObject losePanel;
@@ -19,7 +22,7 @@ public class SpiderManager : MonoBehaviour
     private AudioSource audioSource;
     private float timer;
     private bool level1Ended = false;
-    private BedroomRoundManager bedroomRoundManager;
+    private ProgressTracker progress;
     
     void Awake()
     {
@@ -30,7 +33,7 @@ public class SpiderManager : MonoBehaviour
     {
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
-        bedroomRoundManager = FindAnyObjectByType<BedroomRoundManager>();
+        progress = FindAnyObjectByType<ProgressTracker>();
     }
 
     void Update()
@@ -51,20 +54,19 @@ public class SpiderManager : MonoBehaviour
         if(spidersDestroyed >= totalSpiders)
         {
             WinGame();
-            OnLevel1Complete();
+            progress.CompleteLevel(1);
         }
     }
-
-    public void OnLevel1Complete()
-    {
-        bedroomRoundManager.CompleteLevel(1);
-    }
-
     private void WinGame()
     {
         level1Ended = true;
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound); 
+        if (winParticlesLHS !=null)
+        {
+            winParticlesLHS.Play();
+            winParticlesRHS.Play();
+        }
         Debug.Log("Level 1 Complete!");
   
     }

@@ -21,11 +21,11 @@ public class PuzzleManager : MonoBehaviour
     public float previewDuration = 5f; 
     public GameObject[] puzzlePieces;
 
-    private BedroomRoundManager bedroomRoundManager;
+    private ProgressTracker progress;
 
     void Start()
     {
-        bedroomRoundManager = FindAnyObjectByType<BedroomRoundManager>();
+        progress = FindAnyObjectByType<ProgressTracker>();
         Instance = this;
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
@@ -73,13 +73,8 @@ public class PuzzleManager : MonoBehaviour
         if (piecesPlaced >= 5)
         {
             WinGame();
-            OnLevel2Complete();
+           progress.CompleteLevel(2);
         }
-    }
-
-    public void OnLevel2Complete()
-    {
-        bedroomRoundManager.CompleteLevel(2);
     }
 
     private void WinGame()

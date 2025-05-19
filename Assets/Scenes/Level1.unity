@@ -728,6 +728,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 98.832
       objectReference: {fileID: 0}
+    - target: {fileID: 2940884132373639586, guid: bf3b28ee6a6862b4f8586db47ad7fd39, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8134379264989771574, guid: bf3b28ee6a6862b4f8586db47ad7fd39, type: 3}
       propertyPath: m_Name
       value: (RHS)ConfettiBurst
@@ -737,6 +741,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf3b28ee6a6862b4f8586db47ad7fd39, type: 3}
+--- !u!198 &765354286 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2940884132373639586, guid: bf3b28ee6a6862b4f8586db47ad7fd39, type: 3}
+  m_PrefabInstance: {fileID: 765354285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &878639163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261fe2e01b109a94aa32436a86dee8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winParticlesLHS: {fileID: 2025516214}
+  winParticlesRHS: {fileID: 765354286}
   winPanel: {fileID: 1384486867}
   losePanel: {fileID: 938690691}
   winSound: {fileID: 8300000, guid: 83d31d7b22cecb24b97fbe0261bfe84f, type: 3}
@@ -1974,11 +1985,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -7.475
       objectReference: {fileID: 0}
+    - target: {fileID: 5054301433518917145, guid: 0e26bfa45c2ace243bcc46d7d1aaecca, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e26bfa45c2ace243bcc46d7d1aaecca, type: 3}
+--- !u!198 &2025516214 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5054301433518917145, guid: 0e26bfa45c2ace243bcc46d7d1aaecca, type: 3}
+  m_PrefabInstance: {fileID: 2025516213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1968726762189203382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2800,8 +2820,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1442179115}
-  - {fileID: 2025516213}
-  - {fileID: 765354285}
   - {fileID: 379183811}
   - {fileID: 1710387461}
   - {fileID: 2016122826}
@@ -2811,3 +2829,5 @@ SceneRoots:
   - {fileID: 1311471591}
   - {fileID: 224269140}
   - {fileID: 401569718}
+  - {fileID: 2025516213}
+  - {fileID: 765354285}
