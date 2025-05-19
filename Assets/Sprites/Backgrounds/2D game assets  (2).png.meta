@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 68b41d5f81004104bb5e58688b7c5346
+guid: 7843d31a6e18a5e4fa6ca2054d4183ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5921144153497064331
-    second: movement tut_0
+      213: -3683186389979059130
+    second: 2D game assets  (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: movement tut_0
+      name: 2D game assets  (2)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1300
-        height: 788
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b83d21d6c312c2250800000000000000
-      internalID: 5921144153497064331
+      spriteID: 64caebf1e71b2ecc0800000000000000
+      internalID: -3683186389979059130
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      movement tut_0: 5921144153497064331
+      2D game assets  (2)_0: -3683186389979059130
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

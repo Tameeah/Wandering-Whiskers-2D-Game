@@ -12,10 +12,7 @@ public class UIManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void ShowWinPanel()
-    {
-        winPanel.SetActive(true);
-    }
+    public void ShowWinPanel() => winPanel.SetActive(true);
 }
 
 

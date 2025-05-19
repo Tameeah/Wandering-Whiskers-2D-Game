@@ -7,13 +7,11 @@ public class CountdownManager : MonoBehaviour
 {
     public static CountdownManager Instance;
     [SerializeField] TMP_Text countdownText;
-    [SerializeField] GameObject timesUpPanel;
     [SerializeField] TMP_Text timerText;
     [SerializeField] float duration, currentTime;
-    [SerializeField] AudioSource sadSound;
 
 
-    private float countdownTime = 3f;
+    public float countdownTime = 15f;
     private bool isFirstCountdownDone = false;
     private bool isSecondCountdownStarted = false;
 
@@ -25,7 +23,6 @@ public class CountdownManager : MonoBehaviour
 
     void Start()
     {
-        timesUpPanel.SetActive(false);
         currentTime = duration;
         timerText.text = currentTime.ToString();
         StartCoroutine(CountdownSequence());
@@ -60,8 +57,6 @@ public class CountdownManager : MonoBehaviour
         }
 
         countdownText.text = "";
-        timesUpPanel.SetActive(true);
-        sadSound.Play();
     }
 }
 

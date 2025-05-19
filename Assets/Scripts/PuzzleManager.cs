@@ -1,50 +1,102 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System; 
 
 public class PuzzleManager : MonoBehaviour
 {
-    [SerializeField] DresserPieces[] dresserPieces;
-    [SerializeField] GameObject winPanel;
-    [SerializeField] AudioSource applauseSound;
-    [SerializeField] AudioSource sadSound;
+    public static PuzzleManager Instance;
 
-    private int correctPieces = 0;
+    public GameObject winPanel;
+    public GameObject losePanel;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    public float maxTime = 30f;
+
+    private int piecesPlaced = 0;
+    private AudioSource audioSource;
+    private float timer;
     private bool level2Ended = false;
+
+    public GameObject puzzlePreview; 
+    public float previewDuration = 5f; 
+    public GameObject[] puzzlePieces;
+
+    private BedroomRoundManager bedroomRoundManager;
 
     void Start()
     {
-        winPanel.SetActive(false);
+        bedroomRoundManager = FindAnyObjectByType<BedroomRoundManager>();
+        Instance = this;
+        timer = maxTime;
+        audioSource = GetComponent<AudioSource>();
+
+        puzzlePreview.SetActive(true);
+        SetPuzzlePiecesActive(false);
+
+        StartCoroutine(HidePreviewAndStartGame());
     }
 
-    public void PiecePlacedCorrectly()
+    private IEnumerator HidePreviewAndStartGame()
     {
-        correctPieces++;
+        yield return new WaitForSeconds(previewDuration);
 
-        if (correctPieces == dresserPieces.Length && !level2Ended)
+        puzzlePreview.SetActive(false);
+        SetPuzzlePiecesActive(true);
+    }
+
+    private void SetPuzzlePiecesActive(bool active)
+    {
+        foreach (GameObject piece in puzzlePieces)
         {
-            EndLevel2(true);
+            piece.GetComponent<CanvasGroup>().blocksRaycasts = active;
         }
     }
 
-    public void PieceRemovedFromCorrect()
+    void Awake()
     {
-        correctPieces--;
+        if (Instance == null) Instance = this;
     }
 
-    private void EndLevel2(bool won)
+    void Update()
+    {
+        if (level2Ended) return;
+
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            LoseGame();
+        }
+    }
+    public void PiecePlaced()
+    {
+        piecesPlaced++;
+        if (piecesPlaced >= 5)
+        {
+            WinGame();
+            OnLevel2Complete();
+        }
+    }
+
+    public void OnLevel2Complete() => bedroomRoundManager.CompleteLevel(2);
+
+
+    private void WinGame()
     {
         level2Ended = true;
+        winPanel.SetActive(true);
+        audioSource.PlayOneShot(winSound);
+        Debug.Log("Level 2 Complete!");
+    }
 
-        if (won)
-        {
-            winPanel.SetActive(true);
-            applauseSound.Play();
-        }
+    private void LoseGame()
+    {
+        level2Ended = true;
+        losePanel.SetActive(true);
+        audioSource.PlayOneShot(loseSound);
+        Debug.Log("Level 2 Failed.");
     }
 }
+
+
 
 

@@ -12,10 +12,7 @@ public class Spider : MonoBehaviour
     public Image healthBarFill;
     public GameObject[] spiderPrefabs;
 
-    public void Start()
-    {
-        curHp = maxHp;
-    }
+    public void Start() => curHp = maxHp;
 
 
     public void Damage()

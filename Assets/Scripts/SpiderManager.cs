@@ -7,46 +7,71 @@ using TMPro;
 public class SpiderManager : MonoBehaviour
 {
     public static SpiderManager instance;
+    
+    public GameObject winPanel;
+    public GameObject losePanel;
+    public AudioClip winSound;
+    public AudioClip loseSound;
+    public float maxTime = 20f;
 
     private int totalSpiders = 3;
     private int spidersDestroyed = 0;
+    private AudioSource audioSource;
+    private float timer;
     private bool level1Ended = false;
-    public ParticleSystem winParticlesRHS;
-    public ParticleSystem winParticlesLHS;
-
-
+    private BedroomRoundManager bedroomRoundManager;
+    
     void Awake()
     {
         if (instance == null) instance = this;
-        else Destroy(gameObject);
     }
 
+    void Start()
+    {
+        timer = maxTime;
+        audioSource = GetComponent<AudioSource>();
+        bedroomRoundManager = FindAnyObjectByType<BedroomRoundManager>();
+    }
+
+    void Update()
+    {
+        if (level1Ended) return;
+
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            LoseGame();
+        }
+    }
+    
     public void SpidersDestroyed()
     {
         spidersDestroyed++;
 
         if(spidersDestroyed >= totalSpiders)
         {
-            Level1Complete();
+            WinGame();
+            OnLevel1Complete();
         }
     }
 
-    void Level1Complete()
+    public void OnLevel1Complete() => bedroomRoundManager.CompleteLevel(1);
+
+    private void WinGame()
     {
         level1Ended = true;
-        Debug.Log("Level Complete! You earned a reward!");
-        UIManager.Instance.ShowWinPanel(); // Show win UI
-        winParticlesLHS.Play();
-        winParticlesRHS.Play();
+        winPanel.SetActive(true);
+        audioSource.PlayOneShot(winSound); 
+        Debug.Log("Level 1 Complete!");
+  
     }
 
-    public void Level1Failed()
+    private void LoseGame()
     {
-        if (!level1Ended)
-        {
-            level1Ended = true;
-            Debug.Log("Level Failed! Not all spiders were caught.");
-        }
+        level1Ended = true;
+        losePanel.SetActive(true);
+        audioSource.PlayOneShot(loseSound);
+        Debug.Log("Level 1 Failed.");
     }
 
 }

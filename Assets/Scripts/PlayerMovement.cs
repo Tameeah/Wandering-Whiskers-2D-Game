@@ -9,10 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     Vector2 movement;
 
-    private void Start()
-    {
-       animator = GetComponent<Animator>();
-    }
+    private void Start() => animator = GetComponent<Animator>();
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -23,8 +20,5 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
     }
-    void FixedUpdate()
-    {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-    }
+    void FixedUpdate() => rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 }

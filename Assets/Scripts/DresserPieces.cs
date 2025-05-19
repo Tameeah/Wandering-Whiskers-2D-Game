@@ -1,58 +1,50 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-
-public class DresserPieces : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class DresserPieces : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public RectTransform targetPosition;
-    public float snapDistance = 50f;
+    public Transform correctSlot;
+    public AudioClip clickSound;
+    public float snapDistance = 50f; // Tweak as needed
 
-    private Vector3 originalPosition;
-    private bool isPlacedCorrectly = false;
-    private Canvas canvas;
-    private PuzzleManager puzzleManager;
+    private CanvasGroup canvasGroup;
+    private Vector3 startPosition;
+    private AudioSource audioSource;
+    private bool isPlaced = false;
 
-    [System.Obsolete]
     void Start()
     {
-        originalPosition = transform.position;
-        canvas = GetComponentInParent<Canvas>();
-        puzzleManager = FindObjectOfType<PuzzleManager>();
+        startPosition = transform.position;
+        canvasGroup = GetComponent<CanvasGroup>();
+        audioSource = GameObject.Find("PuzzleManager").GetComponent<AudioSource>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (isPlacedCorrectly) return;
+        if (isPlaced) return;
+        canvasGroup.blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (isPlacedCorrectly) return;
-
-        transform.position += (Vector3)eventData.delta / canvas.scaleFactor;
+        if (isPlaced) return;
+        transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (Vector3.Distance(transform.position, targetPosition.position) < snapDistance)
+        canvasGroup.blocksRaycasts = true;
+        if (Vector3.Distance(transform.position, correctSlot.position) < snapDistance)
         {
-            transform.position = targetPosition.position;
-
-            if (!isPlacedCorrectly)
-            {
-                isPlacedCorrectly = true;
-                puzzleManager.PiecePlacedCorrectly();
-            }
+            transform.position = correctSlot.position;
+            isPlaced = true;
+            audioSource.PlayOneShot(clickSound);
+            PuzzleManager.Instance.PiecePlaced();
         }
         else
         {
-            if (isPlacedCorrectly)
-            {
-                isPlacedCorrectly = false;
-                puzzleManager.PieceRemovedFromCorrect();
-            }
-
-            transform.position = originalPosition;
+            transform.position = startPosition;
         }
     }
 
+    public bool IsPlacedCorrectly() => isPlaced;
 }
