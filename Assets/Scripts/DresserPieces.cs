@@ -1,5 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+
+//Title: DresserPieces
+//Author: ChatGPT
+//Date: 17 May 2025
+//Code Version: 
+//Availability:
+
 public class DresserPieces : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Transform correctSlot;

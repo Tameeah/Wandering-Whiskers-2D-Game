@@ -1,6 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+//Title:ProgressTracker 
+//Author: ChatGPT
+//Date: 19 May 2025
+//Code Version: 
+//Availability:
+
 public class ProgressTracker : MonoBehaviour
 {
     public Slider progressBar; // Attach the UI Slider here

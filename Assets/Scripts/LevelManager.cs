@@ -1,6 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Title:LevelManager
+//Author: ChatGPT
+//Date: 5 May 2025
+//Code Version: 
+//Availability:
+
 public class LevelManager : MonoBehaviour
 {
     private bool isLevel1Complete = false;

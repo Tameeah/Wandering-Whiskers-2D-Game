@@ -3,6 +3,13 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 
+//Title: CountdownManager
+//Author: ChatGPT
+//Date: 14 May 2025
+//Code Version: 
+//Availability:
+
+
 public class CountdownManager : MonoBehaviour
 {
     public static CountdownManager Instance;

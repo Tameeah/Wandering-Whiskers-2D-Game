@@ -1,6 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+//Title:RewardBar
+//Author: ChatGPT
+//Date: 19 May 2025
+//Code Version: 
+//Availability:
+
 public class RewardBar : MonoBehaviour
 {
     public Image reward1Image;

@@ -1,5 +1,11 @@
 using UnityEngine;
 
+//Title:UIManager
+//Author: ChatGPT
+//Date: 15 May 2025
+//Code Version: 
+//Availability:
+
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;

@@ -2,6 +2,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Title:PuzzleManager
+//Author: ChatGPT
+//Date: 14 May 2025
+//Code Version: 
+//Availability:
+
 public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager Instance;
