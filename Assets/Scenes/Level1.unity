@@ -147,6 +147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: (LHS)ConfettiBurst
       objectReference: {fileID: 0}
+    - target: {fileID: 3105364970540140762, guid: 0e26bfa45c2ace243bcc46d7d1aaecca, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4853923935631392505, guid: 0e26bfa45c2ace243bcc46d7d1aaecca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.92
@@ -1323,8 +1327,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442179112}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 960.01746, y: 540.00104, z: -2202.9387}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1504,6 +1508,10 @@ PrefabInstance:
     - target: {fileID: 8134379264989771574, guid: bf3b28ee6a6862b4f8586db47ad7fd39, type: 3}
       propertyPath: m_Name
       value: (RHS)ConfettiBurst
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134379264989771574, guid: bf3b28ee6a6862b4f8586db47ad7fd39, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
