@@ -1566,7 +1566,7 @@ MonoBehaviour:
   losePanel: {fileID: 3668380430868808678}
   winSound: {fileID: 8300000, guid: 83d31d7b22cecb24b97fbe0261bfe84f, type: 3}
   loseSound: {fileID: 8300000, guid: 00552c53ef8c042478a060522c8c91f9, type: 3}
-  maxTime: 14
+  maxTime: 19
   puzzlePreview: {fileID: 207078419}
   previewDuration: 5
   puzzlePieces:
@@ -1575,7 +1575,6 @@ MonoBehaviour:
   - {fileID: 408617541}
   - {fileID: 385002662}
   - {fileID: 2100868177}
-  winParticles: {fileID: 1764718624}
 --- !u!4 &682272014
 Transform:
   m_ObjectHideFlags: 0
@@ -2267,11 +2266,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!198 &1764718624 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5054301433518917145, guid: 0e26bfa45c2ace243bcc46d7d1aaecca, type: 3}
-  m_PrefabInstance: {fileID: 173180307}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1764718625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4853923935631392505, guid: 0e26bfa45c2ace243bcc46d7d1aaecca, type: 3}

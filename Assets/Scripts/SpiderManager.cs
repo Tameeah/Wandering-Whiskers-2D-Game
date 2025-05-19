@@ -19,6 +19,7 @@ public class SpiderManager : MonoBehaviour
     private AudioSource audioSource;
     private float timer;
     private bool level1Ended = false;
+    private BedroomRoundManager bedroomRoundManager;
     
     void Awake()
     {
@@ -29,6 +30,7 @@ public class SpiderManager : MonoBehaviour
     {
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
+        bedroomRoundManager = FindAnyObjectByType<BedroomRoundManager>();
     }
 
     void Update()
@@ -41,7 +43,7 @@ public class SpiderManager : MonoBehaviour
             LoseGame();
         }
     }
-
+    
     public void SpidersDestroyed()
     {
         spidersDestroyed++;
@@ -49,14 +51,20 @@ public class SpiderManager : MonoBehaviour
         if(spidersDestroyed >= totalSpiders)
         {
             WinGame();
+            OnLevel1Complete();
         }
     }
-
+    
+    public void OnLevel1Complete()
+    {
+        bedroomRoundManager.CompleteLevel(1);
+    }
+   
     private void WinGame()
     {
         level1Ended = true;
         winPanel.SetActive(true);
-        audioSource.PlayOneShot(winSound);
+        audioSource.PlayOneShot(winSound); 
         Debug.Log("Level 1 Complete!");
   
     }

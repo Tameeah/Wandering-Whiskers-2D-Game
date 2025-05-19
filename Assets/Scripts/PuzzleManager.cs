@@ -10,7 +10,7 @@ public class PuzzleManager : MonoBehaviour
     public GameObject losePanel;
     public AudioClip winSound;
     public AudioClip loseSound;
-    public float maxTime = 20f;
+    public float maxTime = 30f;
 
     private int piecesPlaced = 0;
     private AudioSource audioSource;
@@ -21,19 +21,18 @@ public class PuzzleManager : MonoBehaviour
     public float previewDuration = 5f; 
     public GameObject[] puzzlePieces;
 
-    public ParticleSystem winParticles;
+    private BedroomRoundManager bedroomRoundManager;
 
     void Start()
     {
+        bedroomRoundManager = FindAnyObjectByType<BedroomRoundManager>();
         Instance = this;
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
 
-        // Show preview and disable pieces
         puzzlePreview.SetActive(true);
         SetPuzzlePiecesActive(false);
 
-        // Hide preview after delay
         StartCoroutine(HidePreviewAndStartGame());
     }
 
@@ -68,26 +67,27 @@ public class PuzzleManager : MonoBehaviour
             LoseGame();
         }
     }
-
     public void PiecePlaced()
     {
         piecesPlaced++;
         if (piecesPlaced >= 5)
         {
             WinGame();
+            OnLevel2Complete();
         }
     }
+    
+    public void OnLevel2Complete()
+    {
+        bedroomRoundManager.CompleteLevel(2);
+    }
+
 
     private void WinGame()
     {
         level2Ended = true;
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound);
-
-        if (winParticles != null)
-        {
-            winParticles.Play();
-        }
         Debug.Log("Level 2 Complete!");
     }
 
