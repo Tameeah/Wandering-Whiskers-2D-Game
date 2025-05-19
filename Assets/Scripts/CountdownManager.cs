@@ -15,6 +15,11 @@ public class CountdownManager : MonoBehaviour
     private bool isFirstCountdownDone = false;
     private bool isSecondCountdownStarted = false;
 
+    public CountdownManager(bool isSecondCountdownStarted)
+    {
+        this.isSecondCountdownStarted = isSecondCountdownStarted;
+    }
+
     void Awake()
     {
         if (Instance == null) Instance = this;
