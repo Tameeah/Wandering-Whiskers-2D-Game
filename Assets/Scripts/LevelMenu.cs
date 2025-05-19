@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 //Title: LevelMenu
 //Author: ChatGPT
 //Date: 7 May 2025
-//Code Version: 
-//Availability:
-
 public class LevelMenu : MonoBehaviour
 {
     public void OpenLevel(string sceneName)

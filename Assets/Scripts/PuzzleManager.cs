@@ -5,8 +5,6 @@ using UnityEngine.UI;
 //Title:PuzzleManager
 //Author: ChatGPT
 //Date: 17 May 2025
-//Code Version: 
-//Availability:
 
 public class PuzzleManager : MonoBehaviour
 {

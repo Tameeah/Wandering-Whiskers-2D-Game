@@ -6,8 +6,6 @@ using static UnityEngine.Rendering.DebugUI.Table;
 ///Title: How to Create a PAUSE MENU in Unity ! | UI Design Tutorial
 //Author:Murat
 //Date: 10 April 2025
-//Code Version: 
-//Availability:https://www.youtube.com/watch?v=MNUYe0PWNNs 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;

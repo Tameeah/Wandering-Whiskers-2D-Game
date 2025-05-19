@@ -3,8 +3,6 @@ using UnityEngine;
 //Title: BedroomRoundManager
 //Author: ChatGPT
 //Date: 19 May 2025
-//Code Version: 
-//Availability:
 
 public class BedroomRoundManager : MonoBehaviour
 {

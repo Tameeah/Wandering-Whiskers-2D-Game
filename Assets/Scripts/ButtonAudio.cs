@@ -3,9 +3,6 @@ using UnityEngine;
 //Title: Week 11 - Enumerations & Sounds
 //Author:Hayes, A
 //Date: 12 May 2025
-//Code Version: 
-//Availability: https://ulwazi.wits.ac.za/courses/81381/files/8885573?module_item_id=924746
-
 
 public class ButtonAudio : MonoBehaviour
 {

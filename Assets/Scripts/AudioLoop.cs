@@ -3,9 +3,6 @@ using UnityEngine;
 //Title: AudioLoop
 //Author: ChatGPT
 //Date: 12 May 2025
-//Code Version: 
-//Availability:
-
 
 public class TimedAudioLoop : MonoBehaviour
 {

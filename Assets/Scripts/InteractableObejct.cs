@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 //Title:InteractableObjects
 //Author: ChatGPT
 //Date: 13 May 2025
-//Code Version: 
-//Availability:
-
 public class Interactable : MonoBehaviour
 {
     [SerializeField]private GameObject interactionIcon; //UI icon to show when in range

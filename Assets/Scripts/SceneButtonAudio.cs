@@ -5,8 +5,6 @@ using UnityEngine.UI;
 //Title:SceneButtonAudio
 //Author: ChatGPT
 //Date: 15 May 2025
-//Code Version: 
-//Availability:
 public class SceneButtonAudio : MonoBehaviour
 {
     public Button button;              

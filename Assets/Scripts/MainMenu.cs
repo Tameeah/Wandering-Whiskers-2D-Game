@@ -5,16 +5,24 @@ using UnityEngine.SceneManagement;
 //Title: Create LEVEL MENU in Unity: UI Design & Level Locking/Unlocking System!
 //Author:Murat
 //Date: 10 April 2025
-//Code Version: 
-//Availability:https://www.youtube.com/watch?v=2XQsKNHk1vk&list=PL0P4wU0t1XrUYMYTC2zhM71MgguxSXCmJ&index=17
-
 
 public class MainMenu : MonoBehaviour
 {
+    public string sceneName;
+    public string nextScene;
+    public string previousScene;
+
     [SerializeField] Animator transitionAnim;
-    public void ChangesSceneWithDelay(string sceneName)
+
+    void Update()
     {
-        StartCoroutine(LoadSceneAfterDelay(sceneName));
+        if (Input.GetKey(KeyCode.Escape))
+            StartCoroutine(LoadSceneAfterDelay(sceneName));
+
+        if (Input.GetKey(KeyCode.Backspace))
+        {
+            //Call Previous scene function here
+        }
     }
 
     IEnumerator LoadSceneAfterDelay(string sceneName)
@@ -29,5 +37,14 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Application has quit.");
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+    public void PreviousScene()
+    {
+        SceneManager.LoadScene(previousScene);
     }
 }
