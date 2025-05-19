@@ -26,12 +26,8 @@ public class PuzzleManager : MonoBehaviour
     public GameObject puzzlePreview; 
     public float previewDuration = 5f; 
     public GameObject[] puzzlePieces;
-
-    private ProgressTracker progress;
-
     void Start()
     {
-        progress = FindAnyObjectByType<ProgressTracker>();
         Instance = this;
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
@@ -79,7 +75,6 @@ public class PuzzleManager : MonoBehaviour
         if (piecesPlaced >= 5)
         {
             WinGame();
-           progress.CompleteLevel(2);
         }
     }
 

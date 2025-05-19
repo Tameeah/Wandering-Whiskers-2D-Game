@@ -13,11 +13,7 @@ using TMPro;
 
 public class SpiderManager : MonoBehaviour
 {
-    public static SpiderManager instance;
-
-    public ParticleSystem winParticlesLHS;
-    public ParticleSystem winParticlesRHS;
-    
+    public static SpiderManager instance;    
     public GameObject winPanel;
     public GameObject losePanel;
     public AudioClip winSound;
@@ -29,8 +25,6 @@ public class SpiderManager : MonoBehaviour
     private AudioSource audioSource;
     private float timer;
     private bool level1Ended = false;
-    private ProgressTracker progress;
-    
     void Awake()
     {
         if (instance == null) instance = this;
@@ -40,7 +34,6 @@ public class SpiderManager : MonoBehaviour
     {
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
-        progress = FindAnyObjectByType<ProgressTracker>();
     }
 
     void Update()
@@ -61,7 +54,6 @@ public class SpiderManager : MonoBehaviour
         if(spidersDestroyed >= totalSpiders)
         {
             WinGame();
-            progress.CompleteLevel(1);
         }
     }
     private void WinGame()
@@ -69,11 +61,6 @@ public class SpiderManager : MonoBehaviour
         level1Ended = true;
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound); 
-        if (winParticlesLHS !=null)
-        {
-            winParticlesLHS.Play();
-            winParticlesRHS.Play();
-        }
         Debug.Log("Level 1 Complete!");
   
     }
