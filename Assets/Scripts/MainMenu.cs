@@ -5,10 +5,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] Animator transitionAnim;
-    public void ChangesSceneWithDelay(string sceneName)
-    {
-        StartCoroutine(LoadSceneAfterDelay(sceneName));
-    }
+    public void ChangesSceneWithDelay(string sceneName) => StartCoroutine(LoadSceneAfterDelay(sceneName));
 
     IEnumerator LoadSceneAfterDelay(string sceneName)
     {

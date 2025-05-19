@@ -54,12 +54,9 @@ public class SpiderManager : MonoBehaviour
             OnLevel1Complete();
         }
     }
-    
-    public void OnLevel1Complete()
-    {
-        bedroomRoundManager.CompleteLevel(1);
-    }
-   
+
+    public void OnLevel1Complete() => bedroomRoundManager.CompleteLevel(1);
+
     private void WinGame()
     {
         level1Ended = true;

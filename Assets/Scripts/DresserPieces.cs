@@ -46,8 +46,5 @@ public class DresserPieces : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
-    public bool IsPlacedCorrectly()
-    {
-        return isPlaced;
-    }
+    public bool IsPlacedCorrectly() => isPlaced;
 }

@@ -7,12 +7,9 @@ public class SceneButtonAudio : MonoBehaviour
     public Button button;              
     public AudioSource audioSource;    
     public AudioClip clickSound;       
-    public string nextSceneName;       
+    public string nextSceneName;
 
-    void Start()
-    {
-        button.onClick.AddListener(OnButtonClick);
-    }
+    void Start() => button.onClick.AddListener(OnButtonClick);
 
     void OnButtonClick()
     {
@@ -20,8 +17,5 @@ public class SceneButtonAudio : MonoBehaviour
         Invoke("LoadNextScene", 0.3f);
     }
 
-    void LoadNextScene()
-    {
-        SceneManager.LoadScene(nextSceneName);
-    }
+    void LoadNextScene() => SceneManager.LoadScene(nextSceneName);
 }
