@@ -22,9 +22,10 @@ public class CountdownManager : MonoBehaviour
     private bool isFirstCountdownDone = false;
     private bool isSecondCountdownStarted = false;
 
-    public CountdownManager(bool isSecondCountdownStarted)
+    public CountdownManager(bool isSecondCountdownStarted, bool isFirstCountdownDone)
     {
         this.isSecondCountdownStarted = isSecondCountdownStarted;
+        this.isFirstCountdownDone = isFirstCountdownDone;
     }
 
     void Awake()
