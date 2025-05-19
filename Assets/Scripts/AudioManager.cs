@@ -12,7 +12,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip meow;
     public AudioClip buttonClick;
 
-    private void Awake() => DontDestroyOnLoad(gameObject);
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
@@ -20,5 +23,8 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    public void PlaySFX(AudioClip clip) => SFXSource.PlayOneShot(clip);
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
+    }
 }

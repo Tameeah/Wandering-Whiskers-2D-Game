@@ -13,7 +13,10 @@ public class ButtonAudio : MonoBehaviour
         Dresser,
     }
 
-    void Start() => audioSource = GetComponent<AudioSource>();
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void PlaySound(ButtonSoundType soundType)
     {
@@ -35,5 +38,8 @@ public class ButtonAudio : MonoBehaviour
         }
     }
 
-    public void PlayAssignedSound() => PlaySound(soundType);
+    public void PlayAssignedSound()
+    {
+        PlaySound(soundType);
+    }
 }

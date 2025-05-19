@@ -8,7 +8,15 @@ public class BedroomRoundManager : MonoBehaviour
     private bool level1Complete = false;
     private bool level2Complete = false;
 
-    void Awake() => DontDestroyOnLoad(gameObject);
+    public object Instance { get; private set; }
+
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     void Start()
     {
