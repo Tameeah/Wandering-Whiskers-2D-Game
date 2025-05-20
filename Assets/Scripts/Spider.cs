@@ -16,11 +16,22 @@ public class Spider : MonoBehaviour
     public Image healthBarFill;
     public GameObject[] spiderPrefabs;
 
+    public KeyCode killSpider;
+
     public void Start()
     {
         curHp = maxHp;
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(killSpider))
+        {
+            Damage();
+
+
+        }
+    }
     public void Damage()
     {
         if (isDead) return;
@@ -32,6 +43,7 @@ public class Spider : MonoBehaviour
         {
             Die();
         }
+        Debug.Log("Im dying!");
     }
 
     public void Die()
@@ -40,4 +52,5 @@ public class Spider : MonoBehaviour
         gameObject.SetActive(false);
         SpiderManager.instance.SpidersDestroyed();
     }
+
 }

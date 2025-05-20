@@ -12,6 +12,9 @@ public class MainMenu : MonoBehaviour
     public string nextScene;
     public string previousScene;
 
+    public KeyCode prevScnKey;
+    public KeyCode nextScnKey;
+
     [SerializeField] Animator transitionAnim;
 
     void Update()
@@ -19,9 +22,17 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
             StartCoroutine(LoadSceneAfterDelay(sceneName));
 
-        if (Input.GetKey(KeyCode.Backspace))
+        if (Input.GetKey(prevScnKey))
         {
             //Call Previous scene function here
+            StartCoroutine(LoadSceneAfterDelay(previousScene)); 
+
+        }
+        if (Input.GetKey(nextScnKey))
+        {
+            //Call Previous scene function here
+            StartCoroutine(LoadSceneAfterDelay(nextScene));
+
         }
     }
 
