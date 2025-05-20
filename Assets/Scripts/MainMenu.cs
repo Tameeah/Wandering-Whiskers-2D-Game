@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public string nextScene;
     public string previousScene;
 
-    public KeyCode prevScnKey;
+    public KeyCode prevScnKey ;
     public KeyCode nextScnKey;
 
     [SerializeField] Animator transitionAnim;

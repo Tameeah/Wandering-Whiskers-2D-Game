@@ -1457,8 +1457,8 @@ MonoBehaviour:
   sceneName: Bedroom
   nextScene: Bedroom
   previousScene: level2
-  prevScnKey: 0
-  nextScnKey: 0
+  prevScnKey: 276
+  nextScnKey: 275
   transitionAnim: {fileID: 9103035}
 --- !u!114 &664363512
 MonoBehaviour:
