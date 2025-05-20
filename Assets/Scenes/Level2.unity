@@ -1605,6 +1605,7 @@ MonoBehaviour:
   winSound: {fileID: 8300000, guid: 83d31d7b22cecb24b97fbe0261bfe84f, type: 3}
   loseSound: {fileID: 8300000, guid: 00552c53ef8c042478a060522c8c91f9, type: 3}
   maxTime: 19
+  piecesPlaced: 0
   puzzlePreview: {fileID: 207078419}
   previewDuration: 5
   puzzlePieces:

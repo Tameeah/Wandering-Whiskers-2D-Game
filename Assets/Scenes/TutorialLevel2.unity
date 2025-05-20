@@ -854,6 +854,8 @@ MonoBehaviour:
   sceneName: Level2
   nextScene: Level2
   previousScene: Bedroom
+  prevScnKey: 276
+  nextScnKey: 275
   transitionAnim: {fileID: 43333594}
 --- !u!1001 &1512729527
 PrefabInstance:

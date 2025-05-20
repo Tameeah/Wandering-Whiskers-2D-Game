@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using Unity.VisualScripting;
 
 //Title: Create A 2D Idle Clicker Game in Unity! Tutorial 2 | Objectives To Click
 //Author:CubicRogue
@@ -10,13 +11,11 @@ using System;
 
 public class Spider : MonoBehaviour
 {
+    public int maxHp = 10;
     public int curHp;
-    public int maxHp;
     private bool isDead = false;
     public Image healthBarFill;
     public GameObject[] spiderPrefabs;
-
-    public KeyCode killSpider;
 
     public void Start()
     {
@@ -25,18 +24,18 @@ public class Spider : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(killSpider))
+        if (Input.GetMouseButtonDown(0))
         {
-            Damage();
-
-
+            Damage(2.5f);
+            //Debug.Log("")
         }
     }
-    public void Damage()
+
+    public void Damage(float amount)
     {
         if (isDead) return;
 
-        curHp--;
+        curHp-= (int)amount;
         healthBarFill.fillAmount = (float)curHp / (float)maxHp;
 
         if (curHp <= 0)
@@ -49,7 +48,7 @@ public class Spider : MonoBehaviour
     public void Die()
     {
         isDead = true;
-        gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
         SpiderManager.instance.SpidersDestroyed();
     }
 

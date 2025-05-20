@@ -16,7 +16,7 @@ public class PuzzleManager : MonoBehaviour
     public AudioClip loseSound;
     public float maxTime = 30f;
 
-    private int piecesPlaced = 0;
+    public int piecesPlaced = 0;
     private AudioSource audioSource;
     private float timer;
     private bool level2Ended = false;
@@ -69,11 +69,12 @@ public class PuzzleManager : MonoBehaviour
     }
     public void PiecePlaced()
     {
-        piecesPlaced++;
-        if (piecesPlaced >= 5)
+        piecesPlaced+=1;
+        if (piecesPlaced == 8)
         {
             WinGame();
         }
+        
     }
 
     private void WinGame()
