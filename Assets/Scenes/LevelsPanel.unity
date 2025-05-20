@@ -283,8 +283,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 687691577}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
-        m_Mode: 5
+        m_MethodName: NextScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -927,7 +927,6 @@ GameObject:
   - component: {fileID: 1969424465}
   - component: {fileID: 1969424464}
   - component: {fileID: 1969424463}
-  - component: {fileID: 1969424462}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -954,22 +953,6 @@ RectTransform:
   m_AnchoredPosition: {x: -780, y: -457}
   m_SizeDelta: {x: 325.2953, y: 124.3684}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1969424462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969424460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c03d34a5dd44d4caf25dd4d3a1384e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
-  nextScene: 
-  previousScene: 
-  transitionAnim: {fileID: 0}
 --- !u!114 &1969424463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,8 +999,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 687691577}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
-        m_Mode: 5
+        m_MethodName: PreviousScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
