@@ -16,6 +16,8 @@ public class Spider : MonoBehaviour
     private bool isDead = false;
     public Image healthBarFill;
     public GameObject[] spiderPrefabs;
+    private int totalSpiders = 3;
+    private int spidersDestroyed = 0;
 
     public void Start()
     {
@@ -26,16 +28,16 @@ public class Spider : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Damage(2.5f);
+            Damage(); 
             //Debug.Log("")
         }
     }
 
-    public void Damage(float amount)
+    public void Damage()
     {
         if (isDead) return;
 
-        curHp-= (int)amount;
+        curHp--; 
         healthBarFill.fillAmount = (float)curHp / (float)maxHp;
 
         if (curHp <= 0)
@@ -47,9 +49,16 @@ public class Spider : MonoBehaviour
 
     public void Die()
     {
-        isDead = true;
-        this.gameObject.SetActive(false);
-        SpiderManager.instance.SpidersDestroyed();
+        spidersDestroyed++;
+
+        if (spidersDestroyed >= totalSpiders)
+        { 
+            isDead = true;
+            this.gameObject.SetActive(false);
+            SpiderManager.instance.SpidersDestroyed();
+        }
+        
+       
     }
 
 }

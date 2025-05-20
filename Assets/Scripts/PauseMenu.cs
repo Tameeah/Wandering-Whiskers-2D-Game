@@ -9,23 +9,46 @@ using static UnityEngine.Rendering.DebugUI.Table;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    public string nextScene;
+    public string previousScene;
+
+    public KeyCode prevScnKey;
+    public KeyCode nextScnKey;
+
 
     public void Pause()
     {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0;
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+
+        }
+            
     }
 
     public void Play()
     {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1;
+        if (Input.GetKey(prevScnKey))
+        { 
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1;
+
+        }
+
+           
     }
     public void GoToScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
-        Time.timeScale = 1;
+        if (Input.GetKey(prevScnKey))
+        {
+            SceneManager.LoadScene(sceneName);
+            Time.timeScale = 1;
     }
+
+        }
+
+            
 }
 
 
