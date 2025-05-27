@@ -1,49 +1,51 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class PanelChange : MonoBehaviour
 {
-    public GameObject panelToShow;
-    public GameObject panelToHide;
-    public AudioClip clickSound;
-    public AudioSource audioSource;
-
+    public List<GameObject> panels; // Assign in Inspector
+    private int currentIndex = 0;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null )
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
+        ShowPanel(currentIndex);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetMouseButtonDown(0)) // Left Click
         {
-
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
-
-            foreach (Collider2D hit in hits)
-            {
-                if (hit.gameObject == this.gameObject)
-                {
-                    Debug.Log("Hit object; " + hit.name);
-
-                    if (panelToHide != null)
-                        panelToHide.SetActive(false);
-
-                    if (panelToShow != null)
-                        panelToShow.SetActive(true);
-
-                    if (clickSound != null)
-                        audioSource.PlayOneShot(clickSound);
-                }
-  
-            }
-
+            NextPanel();
+        }
+        else if (Input.GetMouseButtonDown(1)) // Right Click
+        {
+            PreviousPanel();
         }
     }
+
+    void ShowPanel(int index)
+    {
+        for (int i = 0; i < panels.Count; i++)
+        {
+            panels[i].SetActive(i == index);
+        }
+    }
+
+    void NextPanel()
+    {
+        currentIndex++;
+        if (currentIndex >= panels.Count)
+            currentIndex = 0;
+        ShowPanel(currentIndex);
+    }
+
+    void PreviousPanel()
+    {
+        currentIndex--;
+        if (currentIndex < 0)
+            currentIndex = panels.Count - 1;
+        ShowPanel(currentIndex);
+    }
 }
+
+
