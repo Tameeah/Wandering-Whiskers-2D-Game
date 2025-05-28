@@ -26,7 +26,7 @@ public class PuzzleManager : MonoBehaviour
     public GameObject[] puzzlePieces;
     void Start()
     {
-        Instance = this;
+        //Instance = this;
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
 

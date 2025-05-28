@@ -17,8 +17,8 @@ public class SceneChange : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Mouse0))
-            StartCoroutine(LoadSceneAfterDelay(sceneName));
+        //if (Input.GetKey(KeyCode.Mouse0))
+        //    StartCoroutine(LoadSceneAfterDelay(sceneName));
 
         if (Input.GetKey(prevScnKey))
         {
