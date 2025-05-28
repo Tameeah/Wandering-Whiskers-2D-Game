@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 //Author:Murat
 //Date: 10 April 2025
 
-public class MainMenu : MonoBehaviour
+public class SceneChange : MonoBehaviour
 {
     public string sceneName;
     public string nextScene;
@@ -15,11 +15,9 @@ public class MainMenu : MonoBehaviour
     public KeyCode prevScnKey ;
     public KeyCode nextScnKey;
 
-    [SerializeField] Animator transitionAnim;
-
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Mouse0))
             StartCoroutine(LoadSceneAfterDelay(sceneName));
 
         if (Input.GetKey(prevScnKey))
@@ -38,10 +36,9 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator LoadSceneAfterDelay(string sceneName)
     {
-        transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(0.3f);  // Let sound finish
         SceneManager.LoadScene(sceneName);
-        transitionAnim.SetTrigger("start");
+
     }
 
     public void QuitApp()

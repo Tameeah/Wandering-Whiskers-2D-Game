@@ -1,51 +1,30 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class PanelChange : MonoBehaviour
 {
-    public List<GameObject> panels; // Assign in Inspector
-    private int currentIndex = 0;
+    public GameObject panelToShow;       // The panel to show on click
+    public GameObject panelToHide;       // The panel to hide on click (optional)
 
-    void Start()
-    {
-        ShowPanel(currentIndex);
-    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Left Click
+        if (Input.GetMouseButtonDown(0)) // Left-click
         {
-            NextPanel();
-        }
-        else if (Input.GetMouseButtonDown(1)) // Right Click
-        {
-            PreviousPanel();
-        }
-    }
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Collider2D[] hits = Physics2D.OverlapPointAll(mousePos);
 
-    void ShowPanel(int index)
-    {
-        for (int i = 0; i < panels.Count; i++)
-        {
-            panels[i].SetActive(i == index);
+            foreach (Collider2D hit in hits)
+            {
+                Debug.Log("Hit: " + hit.gameObject.name);
+
+                // Hide the previous panel if assigned
+                if (panelToHide != null)
+                    panelToHide.SetActive(false);
+
+                // Show the new panel
+                if (panelToShow != null)
+                    panelToShow.SetActive(true);
+            }
         }
-    }
-
-    void NextPanel()
-    {
-        currentIndex++;
-        if (currentIndex >= panels.Count)
-            currentIndex = 0;
-        ShowPanel(currentIndex);
-    }
-
-    void PreviousPanel()
-    {
-        currentIndex--;
-        if (currentIndex < 0)
-            currentIndex = panels.Count - 1;
-        ShowPanel(currentIndex);
     }
 }
-
-
