@@ -1,7 +1,5 @@
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using static UnityEngine.Rendering.DebugUI.Table;
 
 ///Title: How to Create a PAUSE MENU in Unity ! | UI Design Tutorial
 //Author:Murat
@@ -9,48 +7,29 @@ using static UnityEngine.Rendering.DebugUI.Table;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-    public string nextScene;
-    public string previousScene;
-
-    public KeyCode prevScnKey;
-    public KeyCode nextScnKey;
-
 
     public void Pause()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            pauseMenu.SetActive(true);
-            Time.timeScale = 0;
-
-        }
-            
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
     }
 
-    public void Play()
+    public void Exit(string sceneName)
     {
-        if (Input.GetKey(prevScnKey))
-        { 
-            pauseMenu.SetActive(false);
-            Time.timeScale = 1;
-
-        }
-
-           
+        SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
     }
-    public void GoToScene(string sceneName)
+
+    public void Continue()
     {
-        if (Input.GetKey(prevScnKey))
-        {
-            SceneManager.LoadScene(sceneName);
-            Time.timeScale = 1;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
-        }
-
-            
+    public void Levels()
+    {
+        SceneManager.LoadScene("LevelsPanel");
+        Time.timeScale = 1;
+    }
 }
-
-
-
 
