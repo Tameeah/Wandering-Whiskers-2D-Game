@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ecabee068949b142b2f647f6f2c428c
+guid: ebb10f69da16304478357dd06317a6d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2415233319287123937
-    second: spider sprite_0
+      213: 7562108092919104175
+    second: spider side right_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spider sprite_0
+      name: spider side right_0
       rect:
         serializedVersion: 2
-        x: 481
-        y: 466
-        width: 375
-        height: 315
+        x: 72
+        y: 66
+        width: 350
+        height: 389
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1efebcd48e1a48120800000000000000
-      internalID: 2415233319287123937
+      spriteID: fa2cc87ae3102f860800000000000000
+      internalID: 7562108092919104175
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      spider sprite_0: 2415233319287123937
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
