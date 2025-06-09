@@ -45,6 +45,9 @@ TagManager:
   - name: Background
     uniqueID: 3544043217
     locked: 0
+  - name: Spiders
+    uniqueID: 1669049429
+    locked: 0
   - name: Collision
     uniqueID: 38718321
     locked: 0
