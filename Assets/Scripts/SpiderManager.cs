@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -10,7 +8,8 @@ using TMPro;
 
 public class SpiderManager : MonoBehaviour
 {
-    public static SpiderManager instance;    
+    public static SpiderManager instance; 
+    
     public GameObject winPanel;
     public GameObject losePanel;
     public AudioClip winSound;
@@ -18,19 +17,28 @@ public class SpiderManager : MonoBehaviour
     public float maxTime = 20f;
 
     private int totalSpiders = 3;
-    private int spidersDestroyed = 0;
+    private int spiderKilled = 0;
+
     private AudioSource audioSource;
     private float timer;
     private bool level1Ended = false;
+
+    public ParticleSystem LHSParticles;
+    public ParticleSystem RHSParticles;
     void Awake()
     {
-        if (instance == null) instance = this;
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
     }
 
     void Start()
     {
         timer = maxTime;
         audioSource = GetComponent<AudioSource>();
+        winPanel.SetActive(false);
+        losePanel.SetActive(false);
     }
 
     void Update()
@@ -44,11 +52,11 @@ public class SpiderManager : MonoBehaviour
         }
     }
     
-    public void SpidersDestroyed()
+    public void SpiderKilled()
     {
-        spidersDestroyed++;
+        spiderKilled++;
 
-        if(spidersDestroyed >= totalSpiders)
+        if(spiderKilled >= totalSpiders)
         {
             WinGame();
         }
@@ -56,6 +64,17 @@ public class SpiderManager : MonoBehaviour
     private void WinGame()
     {
         level1Ended = true;
+
+        if (LHSParticles != null)
+        {
+            LHSParticles.Play();
+        }
+
+        if (RHSParticles != null)
+        {
+            RHSParticles.Play();
+        }
+
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound); 
         Debug.Log("Level 1 Complete!");
