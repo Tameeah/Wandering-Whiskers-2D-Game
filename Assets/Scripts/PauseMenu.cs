@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject roomsPanel;
     [SerializeField] Animator catAnimation;
+
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -28,6 +30,7 @@ public class PauseMenu : MonoBehaviour
     public void Continue()
     {
         pauseMenu.SetActive(false);
+        roomsPanel.SetActive(false);
         Time.timeScale = 1;
 
         catAnimation.enabled = false;
@@ -35,7 +38,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Levels()
     {
-        SceneManager.LoadScene("LevelsPanel");
+        roomsPanel.SetActive(true);
         Time.timeScale = 1;
     }
 }
