@@ -24,6 +24,9 @@ public class PuzzleManager : MonoBehaviour
     public GameObject puzzlePreview; 
     public float previewDuration = 5f; 
     public GameObject[] puzzlePieces;
+
+    public ParticleSystem LHSParticles;
+    public ParticleSystem RHSParticles;
     void Start()
     {
         //Instance = this;
@@ -70,7 +73,7 @@ public class PuzzleManager : MonoBehaviour
     public void PiecePlaced()
     {
         piecesPlaced+=1;
-        if (piecesPlaced == 8)
+        if (piecesPlaced == 5)
         {
             WinGame();
         }
@@ -80,6 +83,17 @@ public class PuzzleManager : MonoBehaviour
     private void WinGame()
     {
         level2Ended = true;
+
+        if (LHSParticles != null)
+        {
+            LHSParticles.Play();
+        }
+
+        if (RHSParticles != null)
+        {
+            RHSParticles.Play();
+        }
+
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound);
         Debug.Log("Level 2 Complete!");

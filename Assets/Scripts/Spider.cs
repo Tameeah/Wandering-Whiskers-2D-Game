@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
-using Unity.VisualScripting;
 
 //Title: Create A 2D Idle Clicker Game in Unity! Tutorial 2 | Objectives To Click
 //Author:CubicRogue
@@ -14,22 +10,31 @@ public class Spider : MonoBehaviour
     public int maxHp = 10;
     public int curHp;
     private bool isDead = false;
-    public Image healthBarFill;
-    public GameObject[] spiderPrefabs;
-    private int totalSpiders = 3;
-    private int spidersDestroyed = 0;
 
-    public void Start()
+    public Image healthBarFill;
+
+    public AudioClip squashSound;
+    private AudioSource audioSource;
+
+    void Start()
     {
         curHp = maxHp;
+        healthBarFill.fillAmount = 1f;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
-    public void Update()
+    void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
+        PlaySquashSound();
+        Damage();
+    }
+
+    void PlaySquashSound()
+    {
+        if (squashSound != null && audioSource != null)
         {
-            Damage(); 
-            //Debug.Log("")
+            audioSource.PlayOneShot(squashSound);
         }
     }
 
@@ -37,7 +42,7 @@ public class Spider : MonoBehaviour
     {
         if (isDead) return;
 
-        curHp--; 
+        curHp--;
         healthBarFill.fillAmount = (float)curHp / (float)maxHp;
 
         if (curHp <= 0)
@@ -47,18 +52,11 @@ public class Spider : MonoBehaviour
         Debug.Log("Im dying!");
     }
 
-    public void Die()
+    void Die()
     {
-        spidersDestroyed++;
+        isDead = true;
+            gameObject.SetActive(false);
 
-        if (spidersDestroyed >= totalSpiders)
-        { 
-            isDead = true;
-            this.gameObject.SetActive(false);
-            SpiderManager.instance.SpidersDestroyed();
-        }
-        
-       
+        SpiderManager.instance.SpiderKilled();
     }
-
 }
