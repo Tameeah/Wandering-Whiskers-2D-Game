@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject roomsPanel;
+    [SerializeField] GameObject movementPanel;
 
     public void Pause()
     {
@@ -23,12 +25,27 @@ public class PauseMenu : MonoBehaviour
     public void Continue()
     {
         pauseMenu.SetActive(false);
+        roomsPanel.SetActive(false);
+        movementPanel.SetActive(false);
         Time.timeScale = 1;
     }
 
+    public void Restart (string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
+    }
+
+
     public void Levels()
     {
-        SceneManager.LoadScene("LevelsPanel");
+        roomsPanel.SetActive(true);
+        Time.timeScale = 1;
+    }
+
+    public void Movement()
+    {
+        movementPanel.SetActive(true);
         Time.timeScale = 1;
     }
 }
