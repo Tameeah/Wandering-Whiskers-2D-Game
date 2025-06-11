@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wandering Whiskers_0: 4290196973400689781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
