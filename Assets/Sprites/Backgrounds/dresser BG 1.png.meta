@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7843d31a6e18a5e4fa6ca2054d4183ee
+guid: 00a85647e6723bf47b5938bd05e99794
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3683186389979059130
-    second: 2D game assets  (2)_0
+      213: -5966385529165354292
+    second: dresser BG 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2D game assets  (2)_0
+      name: dresser BG 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64caebf1e71b2ecc0800000000000000
-      internalID: -3683186389979059130
+      spriteID: cca6115f8f3233da0800000000000000
+      internalID: -5966385529165354292
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      2D game assets  (2)_0: -3683186389979059130
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
