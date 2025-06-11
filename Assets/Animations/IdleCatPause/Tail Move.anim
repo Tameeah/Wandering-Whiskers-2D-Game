@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: Tail Move
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,18 +22,18 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -1912408381, guid: e93fac107f14cd44b8918f47ea236658, type: 3}
-    - time: 0.6666667
+    - time: 0.71428573
       value: {fileID: 505519984, guid: e93fac107f14cd44b8918f47ea236658, type: 3}
-    - time: 1.3333334
+    - time: 1.5714285
       value: {fileID: -1606357696, guid: e93fac107f14cd44b8918f47ea236658, type: 3}
-    - time: 1.9333333
+    - time: 2.5714285
       value: {fileID: -1912408381, guid: e93fac107f14cd44b8918f47ea236658, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
-  m_SampleRate: 15
+  m_SampleRate: 70
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 2.5857143
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

@@ -8,17 +8,12 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject roomsPanel;
-    [SerializeField] Animator catAnimation;
+    [SerializeField] GameObject movementPanel;
 
     public void Pause()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
-
-        if (catAnimation != null)
-        {
-            catAnimation.Play("Idle");  
-        }
     }
 
     public void Exit(string sceneName)
@@ -31,14 +26,25 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         roomsPanel.SetActive(false);
+        movementPanel.SetActive(false);
         Time.timeScale = 1;
-
-        catAnimation.enabled = false;
     }
+
+    public void Restart (string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
 
     public void Levels()
     {
         roomsPanel.SetActive(true);
+        Time.timeScale = 1;
+    }
+
+    public void Movement()
+    {
+        movementPanel.SetActive(true);
         Time.timeScale = 1;
     }
 }
