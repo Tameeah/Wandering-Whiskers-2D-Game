@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 //Title: Create A 2D Idle Clicker Game in Unity! Tutorial 2 | Objectives To Click
 //Author:CubicRogue
@@ -12,6 +13,7 @@ public class SpiderManager : MonoBehaviour
     
     public GameObject winPanel;
     public GameObject losePanel;
+    public GameObject badgePanel;
     public AudioClip winSound;
     public AudioClip loseSound;
     public float maxTime = 20f;
@@ -39,6 +41,7 @@ public class SpiderManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         winPanel.SetActive(false);
         losePanel.SetActive(false);
+        badgePanel.SetActive(false);
     }
 
     void Update()
@@ -78,15 +81,30 @@ public class SpiderManager : MonoBehaviour
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound); 
         Debug.Log("Level 1 Complete!");
-  
+
+        ProgressTracker.Instance.level1Complete = true;
+
+        //StartCoroutine(ReturnToBedroom());
     }
 
+    //private IEnumerator ReturnToBedroom()
+    //{
+        //yield return new WaitForSeconds(2f); // Let effects/sound play
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("BedroomScene");
+    //}
     private void LoseGame()
     {
         level1Ended = true;
         losePanel.SetActive(true);
         audioSource.PlayOneShot(loseSound);
         Debug.Log("Level 1 Failed.");
+    }
+
+    public void Next()
+    {
+        badgePanel.SetActive(true);
+        winPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 
 }

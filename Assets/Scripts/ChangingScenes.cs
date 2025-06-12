@@ -7,7 +7,6 @@ public class ChangingScenes : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-
     public void QuitApp()
     {
         Application.Quit();

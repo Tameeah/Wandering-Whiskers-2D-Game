@@ -6,50 +6,26 @@ using UnityEngine;
 
 public class BedroomRoundManager : MonoBehaviour
 {
-    [SerializeField] RewardBar rewardBar;
+    [SerializeField] private GameObject reward1Image;
+    [SerializeField] private GameObject reward2Image;
     public GameObject completionPanel;
-
-    private bool level1Complete = false;
-    private bool level2Complete = false;
-
-    public object Instance { get; private set; }
-
-    void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-    }
 
     void Start()
     {
-        rewardBar.ResetRewards();
-        completionPanel.SetActive(false);
-    }
+        // Show rewards
+        reward1Image.SetActive(ProgressTracker.Instance.level1Complete);
+        reward2Image.SetActive(ProgressTracker.Instance.level2Complete);
 
-    public void CompleteLevel(int level)
-    {
-        if (level == 1 && !level1Complete)
+        // Check for round completion
+        if (ProgressTracker.Instance.level1Complete && ProgressTracker.Instance.level2Complete)
         {
-            level1Complete = true;
-            rewardBar.UpdateRewardBar(1);
-        }
-        else if (level == 2 && !level2Complete)
-        {
-            level2Complete = true;
-            rewardBar.UpdateRewardBar(2);
-        }
-
-        CheckRoundCompletion();
-    }
-
-    void CheckRoundCompletion()
-    {
-        if (level1Complete && level2Complete)
-        {
-            Debug.Log("Bedroom round complete!");
             completionPanel.SetActive(true);
+        }
+        else
+        {
+            completionPanel.SetActive(false);
         }
     }
 }
+
+

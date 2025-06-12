@@ -12,6 +12,7 @@ public class PuzzleManager : MonoBehaviour
 
     public GameObject winPanel;
     public GameObject losePanel;
+    public GameObject badgePanel;
     public AudioClip winSound;
     public AudioClip loseSound;
     public float maxTime = 30f;
@@ -97,7 +98,18 @@ public class PuzzleManager : MonoBehaviour
         winPanel.SetActive(true);
         audioSource.PlayOneShot(winSound);
         Debug.Log("Level 2 Complete!");
+
+        ProgressTracker.Instance.level2Complete = true;
+
+        //StartCoroutine(ReturnToBedroom());
     }
+
+    //private IEnumerator ReturnToBedroom()
+    //{
+        //yield return new WaitForSeconds(10f);
+        //UnityEngine.SceneManagement.SceneManager.LoadScene("Bedroom");
+    //}
+
 
     private void LoseGame()
     {
@@ -105,6 +117,13 @@ public class PuzzleManager : MonoBehaviour
         losePanel.SetActive(true);
         audioSource.PlayOneShot(loseSound);
         Debug.Log("Level 2 Failed.");
+    }
+
+    public void Next()
+    {
+        badgePanel.SetActive(true);
+        winPanel.SetActive(false);
+        Time.timeScale = 1;
     }
 }
 
