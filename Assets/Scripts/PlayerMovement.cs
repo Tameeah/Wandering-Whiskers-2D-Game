@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        // Check if player is moving
+        // Check if player is in motion
         if (movement.sqrMagnitude > 0.01f)
         {
             if (!Footprints.isPlaying)
@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
                 Footprints.Stop();
             }
         }
+
 }
     void FixedUpdate()
     {
