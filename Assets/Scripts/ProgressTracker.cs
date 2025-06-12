@@ -6,36 +6,21 @@ using UnityEngine.UI;
 //Date: 19 May 2025
 public class ProgressTracker : MonoBehaviour
 {
-    public Slider progressBar; // Attach the UI Slider here
-    public GameObject completionPanel; // Attach the completion panel here
+    public static ProgressTracker Instance;
 
-    private int progress = 0;
-    private int maxProgress = 2;
+    public bool level1Complete = false;
+    public bool level2Complete = false;
 
-    void Start()
+    private void Awake()
     {
-        progressBar.value = 0;
-        completionPanel.SetActive(false);
-    }
-
-    public void CompleteLevel(int level)
-    {
-        // Prevent duplicate progress from same level
-        if (level == 1 && progress < 1)
+        if (Instance == null)
         {
-            progress++;
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Keep between scenes
         }
-        else if (level == 2 && progress < 2)
+        else
         {
-            progress++;
-        }
-
-        progressBar.value = progress;
-
-        if (progress >= maxProgress)
-        {
-            Debug.Log("All levels complete!");
-            completionPanel.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }
