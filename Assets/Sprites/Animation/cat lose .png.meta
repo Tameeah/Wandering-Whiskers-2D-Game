@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 7e277f529cc79cb4c8fd7171d5125fa4
+guid: 5515f7931a596e34b9fa31feea468c3e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8762952677643603340
-    second: screen_0
+      213: -6973189616981941369
+    second: cat lose _0
+  - first:
+      213: 2763794720756345437
+    second: cat lose _1
+  - first:
+      213: 4857223303478884904
+    second: cat lose _2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: screen_0
+      name: cat lose _0
       rect:
         serializedVersion: 2
-        x: 1199
-        y: 428
-        width: 593
-        height: 395
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 57
+        y: 75
+        width: 275
+        height: 153
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8d418e38034c9970800000000000000
-      internalID: 8762952677643603340
+      spriteID: 78369582df04a3f90800000000000000
+      internalID: -6973189616981941369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat lose _1
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 83
+        width: 275
+        height: 153
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a28c2c7a8fa5620800000000000000
+      internalID: 2763794720756345437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cat lose _2
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 70
+        width: 275
+        height: 153
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82abb9e1cd2586340800000000000000
+      internalID: 4857223303478884904
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 60300da602d0e8543b549a35b5150b59
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      screen_0: 8762952677643603340
+      cat lose _0: -6973189616981941369
+      cat lose _1: 2763794720756345437
+      cat lose _2: 4857223303478884904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

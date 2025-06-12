@@ -10,9 +10,25 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject roomsPanel;
     [SerializeField] GameObject movementPanel;
 
+    [Header("Animations")]
+    [SerializeField] Animator catAnimator;
+    [SerializeField] Animator rightPawAnimator;
+    [SerializeField] Animator leftPawAnimator;
+
     public void Pause()
     {
         pauseMenu.SetActive(true);
+
+        if (catAnimator != null )
+            catAnimator.Play("Tail Move", -1, 0f);
+
+        if (rightPawAnimator != null)
+            rightPawAnimator.Play("PawPrintRight", -1, 0f); 
+
+        if (leftPawAnimator != null)
+            leftPawAnimator.Play("PawPrintsLeft", -1, 0f); 
+     
+
         Time.timeScale = 0;
     }
 

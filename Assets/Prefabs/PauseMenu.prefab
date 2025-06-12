@@ -244,7 +244,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 19d14f95ab74d4844968d7339a627959, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -342,7 +342,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: eb40c3f912da8a34385a4d99dc7add62, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -553,7 +553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: rooms
+  m_text: restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f4e5ec1edf76f7a4bac6f9d2fb1ed927, type: 2}
   m_sharedMaterial: {fileID: -8024895667714811400, guid: f4e5ec1edf76f7a4bac6f9d2fb1ed927, type: 2}
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 4693238049289396460}
   - component: {fileID: 8086575764168770145}
   m_Layer: 5
-  m_Name: rooms
+  m_Name: restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -748,14 +748,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1832556444802816792}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Levels
-        m_Mode: 1
+        m_MethodName: Restart
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!95 &8086575764168770145
@@ -1033,6 +1033,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 5894067986851687252}
   roomsPanel: {fileID: 0}
+  movementPanel: {fileID: 0}
+  catAnimator: {fileID: 6576976265988931287}
+  rightPawAnimator: {fileID: 7096422153050560410}
+  leftPawAnimator: {fileID: 8640539061370016363}
 --- !u!1 &5894067986851687252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,7 +1438,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: dfddd1a22e9460242be9fd2b8907b1ed, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
