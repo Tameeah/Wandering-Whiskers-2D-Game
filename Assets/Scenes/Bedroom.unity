@@ -436,6 +436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 296100593636131666, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_text
+      value: rooms
+      objectReference: {fileID: 0}
     - target: {fileID: 539223068985053240, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 160
@@ -463,6 +467,18 @@ PrefabInstance:
     - target: {fileID: 3758870020686300244, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Intro1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693238049289396460, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693238049289396460, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Levels
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550580155037439906, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_Name
+      value: rooms
       objectReference: {fileID: 0}
     - target: {fileID: 5865980372778316641, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
       propertyPath: m_Name
@@ -10605,7 +10621,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9051692800306759852, guid: 2339b9fdf1e406149a17f8890aa68f6d, type: 3}
+  m_Sprite: {fileID: 8762952677643603340, guid: 7e277f529cc79cb4c8fd7171d5125fa4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10625,8 +10641,8 @@ Transform:
   m_GameObject: {fileID: 1469173821}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.84, y: 12.4, z: 0}
-  m_LocalScale: {x: 1.651495, y: 1.892696, z: 1}
+  m_LocalPosition: {x: 3.0213, y: 12.8063, z: 0}
+  m_LocalScale: {x: 0.99816626, y: 0.9082039, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

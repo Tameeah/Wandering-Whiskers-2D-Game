@@ -28,7 +28,6 @@ public class PauseMenu : MonoBehaviour
         if (leftPawAnimator != null)
             leftPawAnimator.Play("PawPrintsLeft", -1, 0f); 
      
-
         Time.timeScale = 0;
     }
 
