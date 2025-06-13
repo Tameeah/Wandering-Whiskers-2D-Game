@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: f4a3ac77521d49e49b3f1b7704d0dbfa
+guid: 9323f819c6f9561479a1582cb85f72d1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3772964363837634611
-    second: paw print_0
+      213: -7457471272507287533
+    second: spider animation. Death_0
   - first:
-      213: 1535409313411342590
-    second: paw print_1
+      213: 3573019075506963166
+    second: spider animation. Death_1
   - first:
-      213: 4457908009537506250
-    second: paw print_2
+      213: -303209727050741572
+    second: spider animation. Death_2
   - first:
-      213: -1246002023840386782
-    second: paw print_3
-  - first:
-      213: -2693821078215909031
-    second: paw print_4
-  - first:
-      213: -4764637564826388383
-    second: paw print_5
-  - first:
-      213: 2104450795240363196
-    second: paw print_6
+      213: -2204090455996836626
+    second: spider animation. Death_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -131,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: paw print_0
+      name: spider animation. Death_0
       rect:
         serializedVersion: 2
-        x: 200
-        y: 492
-        width: 166
-        height: 206
+        x: 103
+        y: 33
+        width: 187
+        height: 184
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc7004fa6ecb3abc0800000000000000
-      internalID: -3772964363837634611
+      spriteID: 318d587936db18890800000000000000
+      internalID: -7457471272507287533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paw print_1
+      name: spider animation. Death_1
       rect:
         serializedVersion: 2
-        x: 482
-        y: 492
-        width: 165
-        height: 206
+        x: 524
+        y: 55
+        width: 132
+        height: 133
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef0a5b6b2aede4510800000000000000
-      internalID: 1535409313411342590
+      spriteID: ed289432be9e59130800000000000000
+      internalID: 3573019075506963166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paw print_2
+      name: spider animation. Death_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 337
-        width: 136
-        height: 151
+        x: 884
+        y: 52
+        width: 130
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: acb0ad537bbaddd30800000000000000
-      internalID: 4457908009537506250
+      spriteID: cb882b61c58cacbf0800000000000000
+      internalID: -303209727050741572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: paw print_3
+      name: spider animation. Death_3
       rect:
         serializedVersion: 2
-        x: 133
-        y: 15
-        width: 590
-        height: 445
+        x: 1302
+        y: 89
+        width: 77
+        height: 76
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,74 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 221739bc2cf45bee0800000000000000
-      internalID: -1246002023840386782
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paw print_4
-      rect:
-        serializedVersion: 2
-        x: 710
-        y: 345
-        width: 135
-        height: 143
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9512b787000ad9ad0800000000000000
-      internalID: -2693821078215909031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paw print_5
-      rect:
-        serializedVersion: 2
-        x: 488
-        y: 10
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1687a01016b90edb0800000000000000
-      internalID: -4764637564826388383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: paw print_6
-      rect:
-        serializedVersion: 2
-        x: 670
-        y: 11
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cb4179139d2843d10800000000000000
-      internalID: 2104450795240363196
+      spriteID: ee4da75786f7961e0800000000000000
+      internalID: -2204090455996836626
       vertices: []
       indices: 
       edges: []
@@ -297,14 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      paw print_0: -3772964363837634611
-      paw print_1: 1535409313411342590
-      paw print_2: 4457908009537506250
-      paw print_3: -1246002023840386782
-      paw print_4: -2693821078215909031
-      paw print_5: -4764637564826388383
-      paw print_6: 2104450795240363196
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
