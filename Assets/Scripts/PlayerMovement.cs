@@ -34,20 +34,31 @@ public class PlayerMovement : MonoBehaviour
         // Check if player is in motion
         if (movement.sqrMagnitude > 0.01f)
         {
-            if (!Footprints.isPlaying)
+            var main = Footprints.main;
+
+            float angle = Mathf.Atan2(movement.y, movement.x);
+
+            if (movement.y < 0)
             {
-                Footprints.Play();
+                angle += Mathf.PI; 
             }
+            if (movement.y > 0)
+            {
+                angle -= Mathf.PI;
+            }
+
+            main.startRotation = angle;
+
+            if (!Footprints.isPlaying)
+                Footprints.Play();
         }
         else
         {
             if (Footprints.isPlaying)
-            {
                 Footprints.Stop();
-            }
         }
-
-}
+        Debug.Log("Movement: " + movement);
+    }
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
