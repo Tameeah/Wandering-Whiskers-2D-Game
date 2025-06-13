@@ -4098,6 +4098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Badge Earned
       objectReference: {fileID: 0}
+    - target: {fileID: 3988512531139884365, guid: 899570c4a769e94458554361626a48d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7765272632882684702, guid: 899570c4a769e94458554361626a48d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
