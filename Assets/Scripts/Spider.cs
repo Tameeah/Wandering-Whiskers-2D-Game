@@ -15,7 +15,6 @@ public class Spider : MonoBehaviour
 
     public AudioClip squashSound;
     private AudioSource audioSource;
-    public Animator spiderAnimator;
 
     void Start()
     {
@@ -23,13 +22,11 @@ public class Spider : MonoBehaviour
         healthBarFill.fillAmount = 1f;
 
         audioSource = GetComponent<AudioSource>();
-        spiderAnimator = GetComponent<Animator>();
     }
 
     void OnMouseDown()
     {
         PlaySquashSound();
-        spiderAnimator.SetTrigger("Hit");
         Damage();
     }
 
@@ -58,16 +55,8 @@ public class Spider : MonoBehaviour
     void Die()
     {
         isDead = true;
-
-        spiderAnimator.SetTrigger("Die");
-
-        Invoke("HideSpider", 1f);
+            gameObject.SetActive(false);
 
         SpiderManager.instance.SpiderKilled();
-    }
-
-    void HideSpider()
-    {
-        gameObject.SetActive(false);
     }
 }
