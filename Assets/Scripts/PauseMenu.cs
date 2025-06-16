@@ -12,8 +12,7 @@ public class PauseMenu : MonoBehaviour
 
     [Header("Animations")]
     [SerializeField] Animator catAnimator;
-    [SerializeField] Animator rightPawAnimator;
-    [SerializeField] Animator leftPawAnimator;
+    [SerializeField] Animator pawWaveAnimator;
 
     public void Pause()
     {
@@ -22,11 +21,8 @@ public class PauseMenu : MonoBehaviour
         if (catAnimator != null )
             catAnimator.Play("Tail Move", -1, 0f);
 
-        if (rightPawAnimator != null)
-            rightPawAnimator.Play("PawPrintRight", -1, 0f); 
-
-        if (leftPawAnimator != null)
-            leftPawAnimator.Play("PawPrintsLeft", -1, 0f); 
+       if (pawWaveAnimator != null)
+            pawWaveAnimator.Play("PawPrintsLeft", -1, 0f); 
      
         Time.timeScale = 0;
     }
