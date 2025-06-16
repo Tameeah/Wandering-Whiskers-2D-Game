@@ -28,7 +28,7 @@ public class BedroomRoundManager : MonoBehaviour
         }
     }
 
-    public void OnNextButtonClicked()
+    public void next()
     {
         nextButton.SetActive(false);
         completionPanel.SetActive(true);

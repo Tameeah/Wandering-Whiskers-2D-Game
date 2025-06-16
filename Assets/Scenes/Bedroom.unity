@@ -10625,7 +10625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reward1Image: {fileID: 7215851209685508717}
   reward2Image: {fileID: 1561499080801265974}
-  completionPanel: {fileID: 1631426397}
+  completionPanel: {fileID: 665027537}
   nextButton: {fileID: 1248625989}
 --- !u!4 &1317198942
 Transform:
@@ -15972,11 +15972,6 @@ Sprite:
   m_Bones: []
   m_ScriptableObjects: []
   m_SpriteID: 
---- !u!1 &1631426397 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6587874230528857225, guid: 75369a428d07c69438e5e5e9bdca3bec, type: 3}
-  m_PrefabInstance: {fileID: 2421559869999545279}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1635106069
 GameObject:
   m_ObjectHideFlags: 0
@@ -19610,7 +19605,7 @@ PrefabInstance:
       objectReference: {fileID: 1317198941}
     - target: {fileID: 3932764885929813203, guid: 78d4b652b67575b43b22e64ca9d43952, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnNextButtonClicked
+      value: next
       objectReference: {fileID: 0}
     - target: {fileID: 3932764885929813203, guid: 78d4b652b67575b43b22e64ca9d43952, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
