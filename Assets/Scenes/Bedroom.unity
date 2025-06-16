@@ -19763,7 +19763,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1124385621188359054, guid: 78d4b652b67575b43b22e64ca9d43952, type: 3}
       propertyPath: m_text
-      value: Next
+      value: next
       objectReference: {fileID: 0}
     - target: {fileID: 3932764885929813203, guid: 78d4b652b67575b43b22e64ca9d43952, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
