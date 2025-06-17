@@ -8,7 +8,6 @@ public class BedroomRoundManager : MonoBehaviour
 {
     [SerializeField] GameObject reward1Image;
     [SerializeField] GameObject reward2Image;
-    public GameObject completionPanel;
     public GameObject nextButton;
 
     void Start()
@@ -17,7 +16,6 @@ public class BedroomRoundManager : MonoBehaviour
         reward1Image.SetActive(ProgressTracker.Instance.level1Complete);
         reward2Image.SetActive(ProgressTracker.Instance.level2Complete);
 
-        completionPanel.SetActive(false);
         nextButton.SetActive(false);
 
 
@@ -31,7 +29,6 @@ public class BedroomRoundManager : MonoBehaviour
     public void next()
     {
         nextButton.SetActive(false);
-        completionPanel.SetActive(true);
     }
 }
 
