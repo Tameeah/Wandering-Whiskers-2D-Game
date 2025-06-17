@@ -988,7 +988,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4998809380715960597, guid: 899570c4a769e94458554361626a48d7, type: 3}
       propertyPath: m_text
-      value: 'you kitten has earned all her badges!
+      value: 'purr-fectly done!
+
+        here''s your badge
 
 '
       objectReference: {fileID: 0}

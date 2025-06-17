@@ -3875,6 +3875,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3148590323527258034, guid: 21a138baf320eeb4abb8336ed7906964, type: 3}
+    - target: {fileID: 3278443261304100780, guid: 899570c4a769e94458554361626a48d7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -381
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278443261304100780, guid: 899570c4a769e94458554361626a48d7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -226
+      objectReference: {fileID: 0}
     - target: {fileID: 3490447369451325537, guid: 899570c4a769e94458554361626a48d7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3962,6 +3970,22 @@ PrefabInstance:
     - target: {fileID: 3988512531139884365, guid: 899570c4a769e94458554361626a48d7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998809380715960597, guid: 899570c4a769e94458554361626a48d7, type: 3}
+      propertyPath: m_text
+      value: "you've got cat-itude!\nhere's your badge \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998809380715960597, guid: 899570c4a769e94458554361626a48d7, type: 3}
+      propertyPath: m_margin.w
+      value: -52.89209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998809380715960597, guid: 899570c4a769e94458554361626a48d7, type: 3}
+      propertyPath: m_margin.x
+      value: 212.33313
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998809380715960597, guid: 899570c4a769e94458554361626a48d7, type: 3}
+      propertyPath: m_margin.z
+      value: -594.1971
       objectReference: {fileID: 0}
     - target: {fileID: 7765272632882684702, guid: 899570c4a769e94458554361626a48d7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
