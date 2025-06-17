@@ -21651,9 +21651,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 328598648919198724, guid: b17af071b99c1164ba8b4d2da75825f2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2966200626249415253, guid: 3cb648d589438a744a420ef0ae651926, type: 3}
     - target: {fileID: 7824215764419942120, guid: b17af071b99c1164ba8b4d2da75825f2, type: 3}
       propertyPath: m_Name
       value: RoomsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824215764419942120, guid: b17af071b99c1164ba8b4d2da75825f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8072912007783354999, guid: b17af071b99c1164ba8b4d2da75825f2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
