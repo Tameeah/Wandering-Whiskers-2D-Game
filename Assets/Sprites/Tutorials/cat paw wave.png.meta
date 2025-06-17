@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cat paw wave_0: -562693736798768648
+      cat paw wave_1: -2139736703644029539
+      cat paw wave_2: -6263525384213123468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
