@@ -5561,6 +5561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BGAudio
       objectReference: {fileID: 0}
+    - target: {fileID: 4494091492809339140, guid: e297201aa93baa54c9b46706842fa6a8, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
