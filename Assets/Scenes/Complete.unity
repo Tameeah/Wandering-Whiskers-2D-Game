@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BedroomComplete
       objectReference: {fileID: 0}
+    - target: {fileID: 6716867986147479082, guid: 75369a428d07c69438e5e5e9bdca3bec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1058426431039769343, guid: 7e005531fe2e0004880b0de4c77f118f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
