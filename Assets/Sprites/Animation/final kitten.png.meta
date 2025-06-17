@@ -522,7 +522,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      final kitten_0: 1940949153214440841
+      final kitten_1: -6516134395844263911
+      final kitten_10: -8125762242203001565
+      final kitten_11: -4121890706949292623
+      final kitten_12: -811201089143358394
+      final kitten_13: 4354762795343775053
+      final kitten_14: -1268987716579096010
+      final kitten_15: -1069883555384379590
+      final kitten_2: 2171740864398148602
+      final kitten_3: 1915922789396442186
+      final kitten_4: 3683905199462717275
+      final kitten_5: -8714772603746598576
+      final kitten_6: 294980500388509097
+      final kitten_7: 3891092233176124694
+      final kitten_8: -5266405696656191877
+      final kitten_9: 7526536035524440668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

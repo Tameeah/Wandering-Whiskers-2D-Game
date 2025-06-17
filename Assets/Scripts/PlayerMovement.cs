@@ -5,6 +5,8 @@ using UnityEngine;
 //Author:Brackeys
 //Date: 20 April 2025
 
+//OpenAI (2025) ChatGPT response on rotating particle systems in Unity. ChatGPT. Available at: https://chat.openai.com/ (Accessed: 11 June 2025).
+
 
 public class PlayerMovement : MonoBehaviour
 
