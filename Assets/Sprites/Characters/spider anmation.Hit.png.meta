@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spider anmation.Hit_0: -3916417252483040932
+      spider anmation.Hit_1: 1459698157984402347
+      spider anmation.Hit_2: -3313269903642980544
+      spider anmation.Hit_3: 5755768416274612850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
