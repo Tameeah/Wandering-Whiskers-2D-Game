@@ -988,7 +988,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4998809380715960597, guid: 899570c4a769e94458554361626a48d7, type: 3}
       propertyPath: m_text
-      value: 'you kitten has earned all her badges!
+      value: 'purr-fectly done!
+
+        here''s your badge
 
 '
       objectReference: {fileID: 0}
@@ -1681,6 +1683,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PuzzleManager, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4624281005197389832, guid: 67452aa64af41fb4aa578a4c0a6c5bf2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a2f902b85433dfb4a913c2e18f45ab84, type: 2}
     - target: {fileID: 7201761585439976171, guid: 67452aa64af41fb4aa578a4c0a6c5bf2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1868,6 +1874,14 @@ PrefabInstance:
       propertyPath: m_text
       value: restart
       objectReference: {fileID: 0}
+    - target: {fileID: 539223068985053240, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 539223068985053240, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -91
+      objectReference: {fileID: 0}
     - target: {fileID: 1832556444802816792, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
       propertyPath: roomsPanel
       value: 
@@ -1880,6 +1894,14 @@ PrefabInstance:
       propertyPath: pawWaveAnimator
       value: 
       objectReference: {fileID: 1102803600}
+    - target: {fileID: 2806287305071584166, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -272
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806287305071584166, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -91
+      objectReference: {fileID: 0}
     - target: {fileID: 4693238049289396460, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
@@ -1890,12 +1912,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693238049289396460, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level2
+      value: Level1
       objectReference: {fileID: 0}
     - target: {fileID: 5550580155037439906, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
       propertyPath: m_Name
       value: restart
       objectReference: {fileID: 0}
+    - target: {fileID: 5756055921221355874, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a2f902b85433dfb4a913c2e18f45ab84, type: 2}
     - target: {fileID: 5865980372778316641, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -1904,8 +1930,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6591998392327508278, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a2f902b85433dfb4a913c2e18f45ab84, type: 2}
+    - target: {fileID: 8028333356276636192, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 286
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028333356276636192, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8086575764168770145, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a2f902b85433dfb4a913c2e18f45ab84, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2861729494606191040, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 529eadb31e358e74e9439cd0f79c9353, type: 3}
@@ -3018,6 +3061,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BedroomComplete
       objectReference: {fileID: 0}
+    - target: {fileID: 6587874230528857225, guid: 75369a428d07c69438e5e5e9bdca3bec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3626,8 +3673,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5869180165648640408, guid: b88ce208541541d4e990b7bebf4e3968, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7186657005974499450}
   m_SourcePrefab: {fileID: 100100000, guid: b88ce208541541d4e990b7bebf4e3968, type: 3}
+--- !u!1 &7186657005974499449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5869180165648640408, guid: b88ce208541541d4e990b7bebf4e3968, type: 3}
+  m_PrefabInstance: {fileID: 7186657005974499448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7186657005974499450
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7186657005974499449}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2f902b85433dfb4a913c2e18f45ab84, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
